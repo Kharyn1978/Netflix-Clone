@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Netfilx Clone </title>
+  </head>
+
+  <body> 
+    <header>
+
+     <div id="myVueItem">
+        <h1><strong >Kharyn Netfilx Clone</strong></h1>
+     </div>
+
+        <div id="myVueItem">
+           <h1></h1>
+           <input type="text" v-model="myModel">
+            <button v-on:click="doSomething">click me</button>
+        </div>
+    </header> 
+
+    <main class="main">
+      <div id="sidebar">
+          <nav>
+              <div class="container-fluid">
+                  <!--content here-->
+                  <p class="h3"> MovieType </p>
+                  <ul class="nav-menu"></ul>
+                  <li><a href="#Action">Action</a></li>
+                  <li><a href="#Adventure">Adventure</a></li>
+                  <li><a href="#Comedy">Comedy</a></li>
+                  <li><a href="#Family">Family</a></li>
+              </div>
+          </nav>
+      </div>
+      <script src="https://unpkg.com/vue"></script>
+
+      <script>
+        let myVue = new Vue ({
+            el : 'myVueItem',
+            data : ""{
+             myModel :"Look for movies here"
+             newItem : "";
+             newItem : "";
+             newItem : "";
+
+
+            }
+
+            methods : {
+             function(){
+               console.log('The value of myData is ' + this.myData);
+
+            
+          }
+        }
+       document.getElementById("output").innerHTHML= myVue.$data.myModel,
+
+      console.log('The value of myData is ' + this.myData)
+      </script> 
+    </main>    
+  </body> 
+</html>

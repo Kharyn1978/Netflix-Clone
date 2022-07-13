@@ -1,66 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Netfilx Clone </title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <title> Netfilx Clone </title>
+</head>
 
-  <body> 
+<body>
+
+  <div id="myVueItem">
+
     <header>
+      <div>
+        <h1><strong>Kharyn Netfilx Clone</strong></h1>
+      </div>
 
-     <div id="myVueItem">
-        <h1><strong >Kharyn Netfilx Clone</strong></h1>
-     </div>
-
-        <div id="myVueItem">
-           <h1></h1>
-           <input type="text" v-model="myModel">
-            <button v-on:click="doSomething">click me</button>
-        </div>
-    </header> 
+      <div>
+        <h1></h1>
+        <input type="text" v-model="myModel">
+        <button v-on:click="doSomething">click me</button>
+      </div>
+    </header>
 
     <main class="main">
       <div id="sidebar">
-          <nav>
-              <div class="container-fluid">
-                  <!--content here-->
-                  <p class="h3"> MovieType </p>
-                  <ul class="nav-menu"></ul>
-                  <li><a href="#Action">Action</a></li>
-                  <li><a href="#Adventure">Adventure</a></li>
-                  <li><a href="#Comedy">Comedy</a></li>
-                  <li><a href="#Family">Family</a></li>
-              </div>
-          </nav>
+        <nav>
+          <div class="container-fluid">
+            <!--content here-->
+            <p class="h3"> MovieType </p>
+            <ul class="nav-menu"></ul>
+            <li><a href="#Action">Action</a></li>
+            <li><a href="#Adventure">Adventure</a></li>
+            <li><a href="#Comedy">Comedy</a></li>
+            <li><a href="#Family">Family</a></li>
+          </div>
+        </nav>
       </div>
-      <script src="https://unpkg.com/vue"></script>
+    </main>
+  </div>
 
-      <script>
-        let myVue = new Vue ({
-            el : 'myVueItem',
-            data : ""{
-             myModel :"Look for movies here"
-             newItem : "";
-             newItem : "";
-             newItem : "";
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 
+  <script src="src/js/script.js"></script>
+</body>
 
-            }
-
-            methods : {
-             function(){
-               console.log('The value of myData is ' + this.myData);
-
-            
-          }
-        }
-       document.getElementById("output").innerHTHML= myVue.$data.myModel,
-
-      console.log('The value of myData is ' + this.myData)
-      </script> 
-    </main>    
-  </body> 
 </html>

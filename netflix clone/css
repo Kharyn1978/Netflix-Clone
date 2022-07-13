@@ -1,8 +1,0 @@
-header {
-    background-image : url(../src/blackpanther.jpg);
-}
-
-body {
-    background-color : rgb(142, 40, 40) ,
-
-}

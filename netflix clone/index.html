@@ -16,18 +16,44 @@
     <form action="" method="get">
       <p><h1>Welcome to Kharla's Netfix</h1></p>
     
-      <form>
+      
+   
+         <div>
+            <ul id="listuser">
+               <li>Kharyn</li>
+               <li>Cherel</li>
+               <li>Divine</li>
+            </ul>
+           
+          </div>
+  
+          <form onsubmit="return false">
+            <div class="container">
+             <label for="name"><b>name</b></label>
+             <input type="text" placeholder="Enter Username" id= "uname"                  name="uname" required>
+             <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+            <button type="submit" onclick="Login()">Login</button>
+    
+           </div>
+          </form>
+  
+
+
+        <form action="get"></form>
+
         <h3>Login Here</h3>
 
         <input type="text" placeholder="name" id="username" required>
 
         <input type="password" placeholder="Password" id="password" required>
 
-        <button onclick="login()">login</button>
-
+        <div id="login">
+         <button onclick="login()">login</button>
+        </div>
 
           <p>© copyright Kharyn Nyundu Ilunga</p>
-      </form>
+       </form>
   
   </div>
 
@@ -62,6 +88,44 @@
     </main>
   </div>
 
+    !------ Coming soon------!
+
+  <div class="row">
+    <h3>COMING SOON</h3>
+    <div class="movies-list row_posters">
+       <div v-for="(event,index)in filteredMoviesComingSoon" class="movies row_poster row_posterExtraLarge">
+         <a class="movie-link">
+           <div class="product-image">
+              <img :src="event.Poster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+           </div>
+          </a>
+       </div>
+    </div>
+  </div>
+
+   !------ Available------!
+    
+  <div class="row">
+    <h3>AVAILABLE</h3>
+    <div class="movies-list row_posters">
+       <div v-for="(event,index)in filteredMoviesAvailable" class="movies row_poster row_posterLarge">
+         <a class="movie-link">
+           <div class="product-image">
+              <img :src="event.Poster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+           </div>
+          </a>
+       </div>
+    </div>
+  </div>
+ 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
   <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 

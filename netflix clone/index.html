@@ -40,12 +40,12 @@
         </div>
       </header>
 
-      <main class="main">
+      <div class="main">
 
         <div v-for="movie in movies">
           <h1>{{movie.title}}</h1>
         </div>
-      </main>
+      </div>
     </div>
 
     <!------Watched-------->
@@ -67,10 +67,21 @@
 
     <div>
       <div v-show="!watched">
-        <h2 class="title">NOT watched</h2>
-      </div>
+        <div v-for="(event,index) in filteredMovieTitles">
+          <a class="movie-link">
+            <div>
+              <img :src="event.Poster" alt="Movie Poster">
+              <div>{{event. title}}</div>
+              <div>{{event.genre}}</div>
+              <div>{{event.ReleaseDate}}</div>
+              <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched<button></div>
+            </div>
+          </a>
+        </div>
+    </div>
+      
 
-
+    <div>
       <h1>Search Movies bellow</h1>
       <button v-on:click="weWatched()">search</button>
 

@@ -10,28 +10,16 @@
 </head>
 
 <body>
+  
   <div id="myVueItem">
-    <div class="form">
-
-      <input id="searchText" v-model="SearchInput.serchText" typt="text" placeholder="What are you looking for?" required>
-
-      <form action="" method="get">
-
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXhBDolBXBfClI_W0OpIgiGF8NpfM1K-PeRrCZdiMLYIuyFVEWRUp59qKXS1VMRZO9IU&usqp=CAU">
-        </div>
-
-      </form>
-
-    </div>
 
     <div>
-
       <header>
         <div>
           <h1><strong>Kharla Netfilx Clone</strong></h1>
         </div>
+
+        <input id="searchText" v-model="SearchInput.serchText" typt="text" placeholder="What are you looking for?" required>
 
         <div>
           <h1></h1>
@@ -58,11 +46,13 @@
             <div>{{event. title}}</div>
             <div>{{event.genre}}</div>
             <div>{{event.ReleaseDate}}</div>
-            <div class="botton"><button v-on: click="addToMovieList(event)">watched<button></div>
+            <div class="botton"><button v-on: click="addToMovieList(event)">watched</button></div>
           </div>
         </a>
       </div>
     </div>
+
+    <!------NOT Watched-------->
 
 
     <div>
@@ -74,7 +64,7 @@
               <div>{{event. title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>
-              <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched<button></div>
+              <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
             </div>
           </a>
         </div>

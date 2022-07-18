@@ -13,14 +13,26 @@
 
         
   
-        <form action="" method="get">
-  
-          <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXhBDolBXBfClI_W0OpIgiGF8NpfM1K-PeRrCZdiMLYIuyFVEWRUp59qKXS1VMRZO9IU&usqp=CAU">
+      
+        <body>
+            <div>
+              <ul id="listuser">
+                <h3> All users here: </h3>
+              </ul> 
+            </div>
+            
+          <form onsubmit="return false">
+          <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" id= "uname"                  name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+          <button type="submit" onclick="Login()">Login</button>
+              
           </div>
-  
-        </form>
+          </form>
+          </body>
+          ...
   
       </div>
 

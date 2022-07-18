@@ -1,21 +1,25 @@
 
 .form form{
+    background :url(http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg);
     height: 40%;
     width: 60%;
-    background-color: rgba(255,255,255,0.13);
+   
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
+
+.logo img :url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXhBDolBXBfClI_W0OpIgiGF8NpfM1K-PeRrCZdiMLYIuyFVEWRUp59qKXS1VMRZO9IU&usqp=CAU);
+
+
 form *{
     font-family: 'Poppins',sans-serif;
-    
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -32,7 +36,6 @@ form h3{
     text-align: center;
 }
 form.Container{
-    background-color: rgb(134, 226, 207);
     
     margin: 10% auto;
     padding: 20px;
@@ -46,9 +49,9 @@ label{
 }
 input{
     display: block center;
-    height: 20px;
-    width: 60%;
-    background-color: rgba(243, 19, 205, 0.07);
+    height: 10px;
+    width: 20%;
+    background-color: rgb(200, 20, 53, 0.07);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -83,11 +86,29 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding :20px;
 }
 
-.movie__posters {
+.horizontalDisplayClass {
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
+}
+
+.horizontalDisplayClass :: -webkit-scrollbar {
+    display:none ;
+}
+
+.moviesPosters{
+  height : 40px ;
+  width : 100px ;
+  border-radius: 10%;
+}
+
+.watchedResults{
+    background-color:azure;
+    display : block;
+    height : 300px ;
+
 }

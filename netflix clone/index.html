@@ -12,48 +12,15 @@
 <body>
 
   <div class="form">
+
+    <input id="searchText" v-model="SearchInput.serchText" typt="text"
+          placeholder="What are you looking for?" required >
     
     <form action="" method="get">
-      <p><h1>Welcome to Kharla's Netfix</h1></p>
-    
-      
-   
-         <div>
-            <ul id="listuser">
-               <li>Kharyn</li>
-               <li>Cherel</li>
-               <li>Divine</li>
-            </ul>
-           
-          </div>
-  
-          <form onsubmit="return false">
-            <div class="container">
-             <label for="name"><b>name</b></label>
-             <input type="text" placeholder="Enter Username" id= "uname"                  name="uname" required>
-             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-            <button type="submit" onclick="Login()">Login</button>
-    
-           </div>
-          </form>
-  
 
-
-        <form action="get"></form>
-
-        <h3>Login Here</h3>
-
-        <input type="text" placeholder="name" id="username" required>
-
-        <input type="password" placeholder="Password" id="password" required>
-
-        <div id="login">
-         <button onclick="login()">login</button>
-        </div>
-
-          <p>© copyright Kharyn Nyundu Ilunga</p>
-       </form>
+      <div img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXhBDolBXBfClI_W0OpIgiGF8NpfM1K-PeRrCZdiMLYIuyFVEWRUp59qKXS1VMRZO9IU&usqp=CAU"></div>
+     
+    </form>
   
   </div>
 
@@ -72,23 +39,53 @@
     </header>
 
     <main class="main">
-      <div id="sidebar">
-        <nav>
-          <div class="container-fluid">
-            <!--content here-->
-            <p class="h3"> MovieType </p>
-            <ul class="nav-menu"></ul>
-            <li><a href="#Action">Action</a></li>
-            <li><a href="#Adventure">Adventure</a></li>
-            <li><a href="#Comedy">Comedy</a></li>
-            <li><a href="#Family">Family</a></li>
-          </div>
-        </nav>
-      </div>
+
+         <div v-for="movie in movies >
+            <h1>{{movie.title}}</h1>
+         </div>
+
+
+
     </main>
   </div>
 
-    !------ Coming soon------!
+  !------Watched--------!
+
+  <div v-show= "Watch-List">
+    <div v-for="(event,index) in filteredMovieTitles">
+      <a class ="movie-link">
+         <div>  
+           <img :src="event.Poster" alt="Movie Poster" >
+           <div>{{event. title}}</div>
+           <div>{{event.genre}}</div>
+           <div>{{event.ReleaseDate}}</div>
+           <div class="botton"><button v-on: click="addToMovieList(event)">watched<button></div>
+        
+         </div>
+      </a>
+    </div> 
+  </div>
+
+
+  <div>
+     <div v-show="!watched">
+        <h2 class="title">NOT watched</h2>
+     </div>
+
+
+     <h1>Search Movies bellow</h1>
+    <button v-on:click ="weWatched()">search</button>
+     
+    <div class="watchedResults" v-show="search">
+        <h2 class= "watched">WATCHED</h2>
+        <button v-on:click="weWatched()">close</button>
+    </div>
+      
+  </div>
+  
+  
+
+   !------ Coming soon------!
 
   <div class="row">
     <h3>COMING SOON</h3>
@@ -107,7 +104,7 @@
     </div>
   </div>
 
-   !------ Available------!
+  !------ Available------!
     
   <div class="row">
     <h3>AVAILABLE</h3>

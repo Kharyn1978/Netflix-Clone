@@ -1,4 +1,4 @@
-function Login(){
+function Login() {
 
  var a = new Array();
  kharla = new Object();
@@ -46,7 +46,7 @@ for(var i=0; i<a.length; i++){
 function Login()
 {
    const hash = Object.fromEntries(
-   a.map(e => [e.name, e.password]))
+  a.map(e => [e.name, e.password]))
 
 var username = document.getElementById('uname').value;
 var password = document.getElementById('psw').value;

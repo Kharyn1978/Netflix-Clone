@@ -1,3 +1,8 @@
+.root{
+    background-image: url(../images/netflixLandingPage.jpg);
+}
+
+
 .navbar {
     padding-left: 2vw;
     padding-top: 1vw ;
@@ -9,15 +14,14 @@
     flex-direction : row;
 }
 
-.img-logo{
-    width :14% ;
-    color : #e50914 ;
+.img-logo {
+    width :14%;
+    color : #e50914;
    
 }
 
-.btn-sign-in{
-    width : fit-content;
-    padding: top 8px;
+.btn-sign-in {
+    padding-top: 8px;
     padding-bottom  :8px;
     padding-left :20px;
     padding-right:20px;
@@ -25,5 +29,11 @@
     cursor: pointer;
     background-color: #e50914;
     color : white;
+    width : fit-content; 
 
 } 
+.main-container{
+    width : 100%;
+    height :90vh;
+
+}

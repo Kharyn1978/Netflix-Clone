@@ -16,7 +16,7 @@ fonts {
     font : NetflixSans_W_Regular
 }
 
-.logo img :url/netflix-logo-png-2562);
+.logo img :(url/netflix-logo-png-2562);
 
 
 form *{

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="src/css/form.css">
+
+    <link rel="shortcut icon" href="./images/NetflixIcon.png "  >
+
+  </head>
+  <body>
+
+    
+    
+
+    <div>
+      <div>
+        <nav >
+         <img class="img-logo" src="./images/NetflixLogo.png">
+         <button class = "btn-sign-in">Sign in</button>
+        </nav>
+      </div>
+    
+      <div>
+        <ul id="listuser">
+          <h3>Please Login:</h3>
+        </ul>
+      </div>
+
+      <form onsubmit="return false">
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text"placeholder="Enter Username" id="uname"name="uname"required >
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" id="psw"name="psw" required >
+
+          <button type="submit" onclick="Login()">Login</button>
+        </div>
+      </form>
+ 
+    </div>
+  </body>
+</html>

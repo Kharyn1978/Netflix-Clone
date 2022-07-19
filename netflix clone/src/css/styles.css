@@ -3,11 +3,6 @@ header {
     height: 400px;
 }
 
-body {
-    background-color : rgb(174, 1, 1);
-
-}
-
 .movie-link {
     display: flex;
     flex-direction: column;

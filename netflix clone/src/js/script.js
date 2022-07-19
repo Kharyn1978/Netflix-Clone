@@ -13,8 +13,11 @@ let myVue = new Vue({
         myModel: "Look for movies here",
         newItem: "",
         newItem: "",
-        SearchInput: {serchText: ""},
-       // watched:,
+        searchInput: {
+            searchText: "",
+        },
+
+        searched: false,
 
         movie: [
 
@@ -397,65 +400,44 @@ let myVue = new Vue({
     },
 
     computed: {
-
-        filteredWatchedMovie() {
-            let filteredWatchedMovie = this.movie.filter((movie) => {
-                return movie.Watched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase()); 
-             })
-
-            let watchedMovies = filteredWatchedMovie.sort((a,b) => {
-                return a.MoviePoster- b.MoviePoster;
-
-            })
-
-            return watchedMovies;
-
-            ;
-        },
-
-        filteredNotWatchedMovie() {
-            let filteredNotWatchedMovie= this.movie.filter((movie) => {
-                return movie.NotWatched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase()); 
-             })
-
-            let NotWatchedMovies = filteredNotWatchedMovie.sort((a,b) => {
-                return a.MoviePoster- b.MoviePoster;
-
-            })
-
-            return NotwatchedMovies;
-
-            ;
-        },
-
         filteredMoviesComingSoon() {
-            let filteredMoviesComingSoon= this.movie.filter((movie) => {
-                return movie.CommingSoon.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
+            let filteredMoviesComingSoon = this.movie.filter((movie) => {
+                return movie.CommingSoon.toLowerCase().includes("1".toLowerCase());
             })
 
-            let orderedMoviesComingSoon = filteredMoviesComingSoon.sort((a,b)=> {
-                return a.MoviePoster- b.MoviePoster;
-            })
-
-            return orderedMoviesComingSoon;
+            return filteredMoviesComingSoon;
 
             ;
         },
 
         filteredMoviesAvailable() {
-            let filteredMoviesAvailable= this.movie.filter((movie) => {
-                return movie.MoviesAvailable.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
+            let filteredMoviesAvailable = this.movie.filter((movie) => {
+                return movie.Title.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
             })
 
-            let orderedMoviesAvailable = filteredMoviesAvailable.sort((a,b)=> {
-                return a.PMoviePoster- b.MoviePoster;
+            return filteredMoviesAvailable;
+        },
+
+        
+        filteredWatchedMovie() {
+            let filteredWatchedMovie = this.movie.filter((movie) => {
+                return movie.Watched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase());
             })
 
-            return orderedMoviesAvailable;
-
+            return filteredWatchedMovie;
 
             ;
-        }
+        },
+
+        filteredNotWatchedMovie() {
+            let filteredNotWatchedMovie = this.movie.filter((movie) => {
+                return movie.NotWatched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase());
+            })
+
+            return filteredNotWatchedMovie;
+
+            ;
+        },
 
     },
 
@@ -466,8 +448,8 @@ let myVue = new Vue({
             console.log('The value of myData is ' + this.myData);
         },
 
-        doSomething() {
-            ;
+        theSearch() {
+            this.searched = !this.searched;
         },
 
         addToWatchedList(event) {
@@ -478,11 +460,11 @@ let myVue = new Vue({
             ;
         },
 
-        addToComingSoon(event){
+        addToComingSoon(event) {
             ;
-        }
+        },
 
-        addToAvailableMovieList(event){
+        addToAvailableMovieList(event) {
             ;
         }
 

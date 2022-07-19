@@ -10,36 +10,35 @@
 </head>
 
 <body>
-  
+
   <div id="myVueItem">
 
+
     <div>
-      <header>
-        <div>
-          <h1><strong>Kharla Netfilx Clone</strong></h1>
-        </div>
+      <div>
+        <h1><strong>Kharla Netfilx Clone</strong></h1>
+      </div>
 
-        <input id="searchText" v-model="SearchInput.serchText" typt="text" placeholder="What are you looking for?" required>
-
-        <div>
-          <h1></h1>
-          <input type="text" v-model="myModel">
-          <button v-on:click="doSomething">click me</button>
-        </div>
-      </header>
-
-      <div class="main">
-
-        <div v-for="movie in movies">
-          <h1>{{movie.title}}</h1>
-        </div>
+      <div>
+        <form>
+          <input id="searchText" v-model="searchInput.searchText" type="text" placeholder="What are you looking for?"
+            required>
+          <input id="searchButton" type="button" value="Search" v-on:click="theSearch" />
+        </form>
       </div>
     </div>
+
+    <div class="main">
+      <div v-for="movie in movies">
+        <h1>{{movie.title}}</h1>
+      </div>
+    </div>
+
 
     <!------Watched-------->
 
     <div v-show="watched">
-      <div v-for="(event,index) in filteredMovieTitles">
+      <div v-for="(event,index) in filteredWatchedMovie()">
         <a class="movie-link">
           <div>
             <img :src="event.Poster" alt="Movie Poster">
@@ -55,21 +54,21 @@
     <!------NOT Watched-------->
 
 
-    <div>
-      <div v-show="!watched">
-        <div v-for="(event,index) in filteredMovieTitles">
-          <a class="movie-link">
-            <div>
-              <img :src="event.Poster" alt="Movie Poster">
-              <div>{{event. title}}</div>
-              <div>{{event.genre}}</div>
-              <div>{{event.ReleaseDate}}</div>
-              <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
-            </div>
-          </a>
-        </div>
+
+    <div v-show="!watched">
+      <div v-for="(event,index) in filteredMovieTitles">
+        <a class="movie-link">
+          <div>
+            <img :src="event.Poster" alt="Movie Poster">
+            <div>{{event. title}}</div>
+            <div>{{event.genre}}</div>
+            <div>{{event.ReleaseDate}}</div>
+            <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
+          </div>
+        </a>
+      </div>
     </div>
-      
+
 
     <div>
       <h1>Search Movies bellow</h1>
@@ -121,7 +120,9 @@
         </div>
       </div>
     </div>
+
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
   <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 

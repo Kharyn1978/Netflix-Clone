@@ -397,15 +397,63 @@ let myVue = new Vue({
     },
 
     computed: {
-        filteredMovieTitles() {
+
+        filteredWatchedMovie() {
+            let filteredWatchedMovie = this.movie.filter((movie) => {
+                return movie.Watched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase()); 
+             })
+
+            let watchedMovies = filteredWatchedMovie.sort((a,b) => {
+                return a.MoviePoster- b.MoviePoster;
+
+            })
+
+            return watchedMovies;
+
+            ;
+        },
+
+        filteredNotWatchedMovie() {
+            let filteredNotWatchedMovie= this.movie.filter((movie) => {
+                return movie.NotWatched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase()); 
+             })
+
+            let NotWatchedMovies = filteredNotWatchedMovie.sort((a,b) => {
+                return a.MoviePoster- b.MoviePoster;
+
+            })
+
+            return NotwatchedMovies;
+
             ;
         },
 
         filteredMoviesComingSoon() {
+            let filteredMoviesComingSoon= this.movie.filter((movie) => {
+                return movie.CommingSoon.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
+            })
+
+            let orderedMoviesComingSoon = filteredMoviesComingSoon.sort((a,b)=> {
+                return a.MoviePoster- b.MoviePoster;
+            })
+
+            return orderedMoviesComingSoon;
+
             ;
         },
 
         filteredMoviesAvailable() {
+            let filteredMoviesAvailable= this.movie.filter((movie) => {
+                return movie.MoviesAvailable.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
+            })
+
+            let orderedMoviesAvailable = filteredMoviesAvailable.sort((a,b)=> {
+                return a.PMoviePoster- b.MoviePoster;
+            })
+
+            return orderedMoviesAvailable;
+
+
             ;
         }
 
@@ -422,15 +470,19 @@ let myVue = new Vue({
             ;
         },
 
-        addToMovieList(event) {
+        addToWatchedList(event) {
             ;
         },
 
-        weWatched() {
+        addToNotWatchedList(event) {
             ;
         },
 
-        addToWatchlist(event){
+        addToComingSoon(event){
+            ;
+        }
+
+        addToAvailableMovieList(event){
             ;
         }
 

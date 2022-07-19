@@ -849,19 +849,8 @@ let myVue = new Vue({
         },
 
         filteredMoviesAvailable() {
-            let filteredMoviesAvailable= this.movie.filter((movie) => {
-                return movie.MoviesAvailable.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
-            })
-
-            let orderedMoviesAvailable = filteredMoviesAvailable.sort((a,b)=> {
-                return a.PMoviePoster- b.MoviePoster;
-            })
-
-            return orderedMoviesAvailable;
-
-
-            ;
-        }
+           let movieArray= this.movie;
+           let availableMovie
 
     },
 

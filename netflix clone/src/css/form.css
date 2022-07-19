@@ -1,5 +1,14 @@
+.body {
+    padding : 0px;
+    margin:  0px;
+    overflow: hidden;
+}
+
 .root{
-    background-image: url(../images/netflixLandingPage.jpg);
+    background-size: cover;
+    background-image:radial-gradient(rgba(0,0,0,0.4)),rgba(0,0,0,0.8) ,url(https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -32,8 +41,23 @@
     width : fit-content; 
 
 } 
+
 .main-container{
+    display: flex;
     width : 100%;
     height :90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.main-titles-containers{
+    width:50%;
+    color : white;
+    text-align: center;
+
+}
+
+.main-title{
+    font-size : 3.2em;
 }

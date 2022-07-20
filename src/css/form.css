@@ -7,12 +7,6 @@
  */
 
  body {
-    background-color: rgb(20, 20, 20);
-    background-image: url("../images/netflixLandingPage.jpg");
- } 
-
-
- .body {
     padding : 0px;
     margin:  0px;
     overflow: hidden; 

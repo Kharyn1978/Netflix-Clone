@@ -11,9 +11,9 @@ let myVue = new Vue({
         newItem: "",
         SearchInput: {
             serchText: "",
-        }
+        },
         
-        Watched :false ,
+        watched :false ,
         NotWatched :false,
         commingSoon :false ,
         available :false ,
@@ -433,8 +433,614 @@ let myVue = new Vue({
 
         searched: false,
 
-        movie: [
-
+        movies: [
+            {
+                Title: "Charlie and the Chocolate Factory",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNjcxMjg1Njg2NF5BMl5BanBnXkFtZTcwMjQ4NzMzMw@@._V1_SX300.jpg",
+                Description:
+                    "When Willy Wonka decides to let five children into his chocolate factory, he decides to release five "
+                    + "golden tickets in five separate chocolate bars, causing complete mayhem. The tickets start to be found,"
+                    + "with the fifth going to a very special boy, called Charlie Bucket. With his Grandpa, Charlie joins the "
+                    + "rest of the children to experience the most amazing factory ever. But not everything goes to plan within "
+                    + "the factory.",
+                CommingSoon: "0",
+                Reminder: "0",
+                ReleaseDate: "2005",
+                Genre: "Fantasy",
+                Actors: "7",
+            },
+        
+            {
+                Title: "Cruella",
+                Poster: "https://m.media-amazon.com/images/M/MV5BOWI5YTUxOWEtZmRiZS00ZmQxLWE2NzctYTRiODA2NzE1ZjczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+                Description:
+                    "Before she becomes Cruella de Vil, teenage Estella has a dream. She wishes to become a fashion designer,"
+                    + "having been gifted with talent, innovation, and ambition all in equal measures. But life seems intent on "
+                    + "making sure her dreams never come true. Having wound up penniless and orphaned in London at 12, 10 years "
+                    + "later Estella runs wild through the city streets with her best friends and partners-in-(petty)-crime, "
+                    + "Horace and Jasper, two amateur thieves. When a chance encounter vaults Estella into the world of the young "
+                    + "rich and famous, however, she begins to question the existence she's built for herself in London and wonders "
+                    + "whether she might, indeed, be destined for more after all.",
+                CommingSoon: "0",
+                Reminder: "0",
+                ReleaseDate: "2021",
+                Genre: "Crime",
+                Actors: "7",
+                Video: "https://www.youtube.com/embed/gmRKv7n2If8?rel=0;&autoplay=1",
+            },
+            {
+                Title: "Interstellar",
+                Poster: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+                Description:
+                    "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival:"
+                    + "Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to "
+                    + "go where no man has gone before, a planet that may have the right environment to sustain human life.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2014",
+                Genre: "Sci-fi",
+                Actors: "7",
+            },
+            {
+                Title: "Sunshine",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTU5Nzg2OTk2NF5BMl5BanBnXkFtZTYwNTc1ODM3._V1_SX300.jpg",
+                Description:
+                    "50 years into the future, the Sun begins to die, and Earth is dying as a result. A team of astronauts is sent "
+                    + "to revive the Sun - but the mission fails. Seven years later, a new team is sent to finish the mission "
+                    + "as mankind's last hope.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2007",
+                Genre: "Sci-fi",
+                Actors: "7",
+            },
+            {
+                Title: "James and the Giant Peach",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTNkNWIwNGUtNTJlOC00NDU3LTk0NWEtNjNjNDM4NzRiNThkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+                Description:
+                    "James' happy life at the English seaside is rudely ended when his parents are killed by a rhinoceros "
+                    + "and he goes to live with his two horrid aunts. Daringly saving the life of a spider he comes "
+                    + "into possession of magic boiled crocodile tongues, after which an enormous peach starts to grow in the garden. "
+                    + "Venturing inside, he meets not only the spider but a number of new friends including a ladybug and a centipede "
+                    + "who help him with his plan to try to get to New York.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1996",
+                Genre: "Fantasy",
+                Actors: "7",
+            },
+            {
+                Title: "Chicken Run",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNDgxNjZlZDYtZGJmZC00Mjg0LWEwYzctYWQ0MWFjNTM3ZmM4XkEyXkFqcGdeQXVyNTM5NzI0NDY@._V1_SX300.jpg",
+                Description:
+                    "Having been hopelessly repressed and facing eventual certain death at the chicken farm where they are held, "
+                    + "Rocky the rooster and Ginger the chicken decide to rebel against the evil Mr. and Ms. Tweedy, the farm's owners. "
+                    + "Rocky and Ginger lead their fellow chickens in a great escape from the murderous farmers and their farm of doom.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2000",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "A.I. Artificial Intelligence",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNWU2NzEyMDYtM2MyOS00OGM3LWFkNzAtMzRiNzE2ZjU5ZTljXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+                Description:
+                    "In the not-so-far future the polar ice caps have melted and the resulting rise of the ocean waters has drowned all "
+                    + "the coastal cities of the world. Withdrawn to the interior of the continents, the human race keeps advancing, "
+                    + "reaching the point of creating realistic robots (called mechas) to serve them. One of the mecha-producing companies "
+                    + "builds David, an artificial kid which is the first to have real feelings, especially a never-ending love for his 'mother', "
+                    + "Monica. Monica is the woman who adopted him as a substitute for her real son, who remains in cryo-stasis, stricken by an "
+                    + "incurable disease. David is living happily with Monica and her husband, but when their real son returns home after a cure "
+                    + "is discovered, his life changes dramatically.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2001",
+                Genre: "Sci-fi",
+                Actors: "7",
+            },
+            {
+                Title: "Grave of the Fireflies",
+                Poster: "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+                Description:
+                    "The story of Seita and Setsuko, two young Japanese siblings, living in the declining days of World War II. "
+                    + "When an American firebombing separates the two children from their parents, the two siblings must rely completely "
+                    + "on one another while they struggle to fight for their survival.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "1988",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "The Gods Must Be Crazy",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMzVhZDE2N2UtMjEyZi00ODkyLWJhMTctM2NhZWNkNGE4NWYyXkEyXkFqcGdeQXVyMzg1ODEwNQ@@._V1_SX300.jpg",
+                Description:
+                    "A Sho in the Kalahari desert encounters technology for the first time--in the shape of a Coke bottle. "
+                    + "He takes it back to his people, and they use it for many tasks. The people start to fight over it, "
+                    + "so he decides to return it to the God--where he thinks it came from. Meanwhile, we are introduced to "
+                    + "a clumsy biologist, a schoolteacher assigned to a small village, and a despotic revolutionary.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1980",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Ant-Man",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX300.jpg",
+                Description:
+                    "Armed with the astonishing ability to shrink in scale but increase in strength, con-man Scott Lang must embrace "
+                    + "his inner-hero and help his mentor, Dr. Hank Pym, protect the secret behind his spectacular Ant-Man suit from "
+                    + "a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull "
+                    + "off a heist that will save the world.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2015",
+                Genre: "Adventure",
+                Actors: "7",
+            },
+            {
+                Title: "Uncharted",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMWEwNjhkYzYtNjgzYy00YTY2LThjYWYtYzViMGJkZTI4Y2MyXkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_SX300.jpg",
+                Description:
+                    "Street-smart Nathan Drake (Tom Holland) is recruited by seasoned treasure hunter Victor 'Sully' Sullivan (Mark Wahlberg) "
+                    + "to recover a fortune amassed by Ferdinand Magellan and lost 500 years ago by the House of Moncada. What starts as a heist "
+                    + "job for the duo becomes a globe-trotting, white-knuckle race to reach the prize before the ruthless Santiago Moncada "
+                    + "(Antonio Banderas), who believes he and his family are the rightful heirs. If Nate and Sully can decipher the clues "
+                    + "and solve one of the world's oldest mysteries, they stand to find $5 billion in treasure and perhaps even Nate's long-lost "
+                    + "brother...but only if they can learn to work together.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "2022",
+                Genre: "Adventure",
+                Actors: "7",
+            },
+            {
+                Title: "Red Notice",
+                Poster: "https://m.media-amazon.com/images/M/MV5BZmRjODgyMzEtMzIxYS00OWY2LTk4YjUtMGMzZjMzMTZiN2Q0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+                Description:
+                    "When an Interpol-issued Red Notice the highest level warrant to hunt and capture the world's most wanted goes out, "
+                    + "the FBI's top  profiler John Hartley (Dwayne Johnson) is on the case. His global pursuit finds him smack dab in the "
+                    + "middle of a daring heist where he's forced to partner with the world's greatest art thief Nolan Booth (Ryan Reynolds) "
+                    + "in order to catch the world's most wanted art thief, 'The Bishop' (Gal Gadot). The high-flying adventure that ensues "
+                    + "takes the trio around the world, across the dance floor, trapped in a secluded prison, into the jungle and, worst of all "
+                    + "for them, constantly into each other's company.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "2021",
+                Genre: "Crime",
+                Actors: "7",
+            },
+            {
+                Title: "Wonder Woman",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTYzODQzYjQtNTczNC00MzZhLTg1ZWYtZDUxYmQ3ZTY4NzA1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+                Description:
+                    "Diana, princess of the Amazons, trained to be an unconquerable warrior. Raised on a sheltered island paradise, "
+                    + "when a pilot crashes on their shores and tells of a massive conflict raging in the outside world, Diana leaves her home, "
+                    + "convinced she can stop the threat. Fighting alongside man in a war to end all wars, Diana will discover her full "
+                    + "powers and her true destiny.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2017",
+                Genre: "Adventure",
+                Actors: "7",
+            },
+            {
+                Title: "Honey, I Shrunk the Kids",
+                Poster: "https://m.media-amazon.com/images/M/MV5BOTQ1NTg4MDAtOGU0OS00ZGQwLTliZjQtNDEzZjAzZGI5MjFjXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+                Description:
+                    "On the brink of perfecting his state-of-the-art matter-shrinking machine, the suburban paterfamilias and indefatigable inventor, "
+                    + "Professor Wayne Szalinski, realises that his device truly works, when it zaps both his kids and their friends. Now, to return "
+                    + "to the relative safety of their home while being reduced to a mere quarter-inch size, the minuscule humans must venture out "
+                    + "into the dense and perilous landscapes of their now-immense backyard--a hostile environment where nearly everything spells "
+                    + "trouble. Can the kids exit the green maze of grass in one piece?",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1989",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Babe",
+                Poster: "https://m.media-amazon.com/images/M/MV5BYjg4ZjUzMzMtYzlmYi00YTcwLTlkOWUtYWFmY2RhNjliODQzXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
+                Description:
+                    "Gentle farmer Arthur Hoggett wins a piglet named Babe at a county fair. Narrowly escaping his fate as Christmas dinner when "
+                    + "Farmer Hoggett decides to show him at the next fair, Babe bonds with motherly border collie Fly and discovers that he can "
+                    + "herd sheep too. But will the other farm animals, including Fly's jealous husband, Rex, accept a pig who doesn't conform to "
+                    + "the farm's social hierarchy?",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1995",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Edward Scissorhands",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMWY2MGRkNjgtZDczNi00YWJjLTkwNmUtMTY0NTE5ZDhkZjgwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+                Description:
+                    "In a castle high on top of a hill lives an inventor's greatest creation - Edward, a near-complete person. "
+                    + "The creator died before he could finish Edward's hands; instead, he is left with metal scissors for hands. "
+                    + "Since then, he has lived alone, until a kind lady called Peg discovers him and welcomes him into her home. "
+                    + "At first, everyone welcomes him into the community, but soon things begin to take a change for the worse.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1990",
+                Genre: "Fantasy",
+                Actors: "7",
+            },
+            {
+                Title: "The Adventures of Tintin",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNDE5MDExNTQ1OF5BMl5BanBnXkFtZTcwMDIxMTM5Ng@@._V1_SX300.jpg",
+                Description:
+                    "Having bought a model ship, the Unicorn, for a pound off a market stall Tintin is initially puzzled that the sinister "
+                    + "Mr. Sakharine should be so eager to buy it from him, resorting to murder and kidnapping Tintin - accompanied by his "
+                    + "marvellous dog Snowy - to join him and his gang as they sail to Morocco on an old cargo ship. Sakharine has bribed the "
+                    + "crew to revolt against the ship's master, drunken Captain Haddock, but Tintin, Snowy and Haddock escape, arriving in "
+                    + "Morocco at the court of a sheikh, who also has a model of the Unicorn. Haddock tells Tintin that over three hundred "
+                    + "years earlier his ancestor Sir Francis Haddock was forced to scuttle the original Unicorn when attacked by a piratical "
+                    + "forebear of Sakharine but he managed to save his treasure and provide clues to its location in three separate scrolls, "
+                    + "all of which were secreted in models of the Unicorn. Tintin and Sakharine have one each and the villain intends to use "
+                    + "the glass-shattering top Cs of operatic soprano the Milanese Nightingale to secure the third. With aid from bumbling "
+                    + "Interpol agents the Thompson Twins our boy hero, his dog and the captain must prevent Sakharine from obtaining all "
+                    + "three scrolls to fulfil the prophesy that only the last of the Haddocks can discover the treasure's whereabouts.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2011",
+                Genre: "Adventure",
+                Actors: "7",
+            },
+            {
+                Title: "Life of Pi",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNTg2OTY2ODg5OF5BMl5BanBnXkFtZTcwODM5MTYxOA@@._V1_SX300.jpg",
+                Description:
+                    "In Canada, a writer visits the Indian storyteller Pi Patel and asks him to tell his life story. Pi tells the story of his "
+                    + "childhood in Pondicherry, India, and the origin of his nickname. One day, his father, a zoo owner, explains that the "
+                    + "municipality is no longer supporting the zoo and he has hence decided to move to Canada, where the animals the family owns "
+                    + "would also be sold. They board on a Japanese cargo ship with the animals and out of the blue, there is a storm, followed by "
+                    + "a shipwrecking. Pi survives in a lifeboat with a zebra, an orangutan, a hyena and a male Bengal tiger nicknamed "
+                    + "Richard Parker. They are adrift in the Pacific Ocean, with aggressive hyena and Richard Parker getting hungry. "
+                    + "Pi needs to find a way to survive.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2012",
+                Genre: "Adventure",
+                Actors: "7",
+            },
+            {
+                Title: "Ice Age",
+                Poster: "https://m.media-amazon.com/images/M/MV5BOGEwMTQyMDktMWUwZC00MzExLTg1MGMtYWJiNWNhMzIyMGU5XkEyXkFqcGdeQXVyOTYyMTY2NzQ@._V1_SX300.jpg",
+                Description:
+                    "Back when the Earth was being overrun by glaciers, and animals were scurrying to save themselves from the upcoming Ice Age, "
+                    + "a sloth named Sid, a woolly mammoth named Manny, and a saber-toothed tiger named Diego are forced to become unlikely heroes. "
+                    + "The three reluctantly come together when they have to return a human child to its father while braving the deadly elements of "
+                    + "the impending Ice Age.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2002",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "The Road to El Dorado",
+                Poster: "https://m.media-amazon.com/images/M/MV5BOTEzNWIwMzctOTE1YS00YjIyLTgwZGEtMTMxZDAzNzlmODMxXkEyXkFqcGdeQXVyMjgyMDk1MzY@._V1_SX300.jpg",
+                Description:
+                    "The story is about two swindlers who get their hands on a map to the fabled city of gold, El Dorado, while pulling off some "
+                    + "sort of scam. Their plan goes bad and the rogues end up lost at sea after several misfortunes. Oddly enough, they end up "
+                    + "on the shores of El Dorado, and are worshipped by the natives for their foreign appearances.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2000",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Home Alone",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+                Description:
+                    "It is Christmas time and the McCallister family is preparing for a vacation in Paris, France. But the youngest in the family, "
+                    + "Kevin (Macaulay Culkin), got into a scuffle with his older brother Buzz (Devin Ratray) and was sent to his room, "
+                    + "which is on the third floor of his house. Then, the next morning, while the rest of the family was in a rush to make it to "
+                    + "the airport on time, they completely forgot about Kevin, who now has the house all to himself. Being home alone was fun "
+                    + "for Kevin, having a pizza all to himself, jumping on his parents' bed, and making a mess. Then, Kevin discovers about "
+                    + "two burglars, Harry (Joe Pesci) and Marv (Daniel Stern), about to rob his house on Christmas Eve. Kevin acts quickly by "
+                    + "wiring his own house with makeshift booby traps to stop the burglars and to bring them to justice.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1990",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Johnny English Strikes Again",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMjI4MjQ3MjI5MV5BMl5BanBnXkFtZTgwNjczMDE4NTM@._V1_SX300.jpg",
+                Description:
+                    "A cyber-attack reveals the identity of all active undercover agents in Britain, leaving Johnny English (Rowan Atkinson) "
+                    + "as the Secret Service's last hope. Called out of retirement, English dives head first into action with the mission to "
+                    + "find the mastermind hacker. As a man with few skills and analogue methods, Johnny English must overcome the challenges "
+                    + "of modern technology to make this mission a success.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "2018",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Johnny English Reborn",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMjEzODY2MjU1Nl5BMl5BanBnXkFtZTcwMzc1ODUzNg@@._V1_SX300.jpg",
+                Description:
+                    "Johnny English, the accidental secret agent who doesn't know fear or danger and the most unlikely intelligence officer "
+                    + "in Her Majesty's Secret Service, must stop a group of international assassins before they eliminate a world leader and "
+                    + "cause global chaos. In the years since MI7's top spy vanished off the grid, he has been honing his unique skills in a "
+                    + "remote region of Asia. But when his agency superiors learn of an attempt against the Chinese Premier's life, they must "
+                    + "hunt down the highly unorthodox agent. Now that the world needs him once again, Johnny English is back in action. "
+                    + "With one shot at redemption, he must employ the latest in hi-tech gadgets to unravel a web of conspiracy that runs "
+                    + "throughout the K.G.B., C.I.A., and even MI7. With a mere few days until a heads of state conference, one man must use "
+                    + "every trick in his playbook to protect us all. For Johnny English, disaster may be an option, but failure never is.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2011",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Johnny English",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNDkxODhlNmItYjhiMC00ZjNmLWE2YmMtOTQ3NmQxM2YzOGFiXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+                Description:
+                    "When a funeral of a British spy is attacked, all of the remaining spies are killed. Only one spy is left and is now "
+                    + "Britain's last hope. Johnny English and his sidekick, Bough have been assigned the case of investigating the theft "
+                    + "of the British Crown Jewels. The prime suspect is a mysterious French entrepreneur, known as Pascal Sauvage. English "
+                    + "and Bough soon find out the horrifying truth behind the theft and Sauvage, but it's not going to be an easy job to "
+                    + "bring him to justice.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2003",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Legally Blonde",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNTEyNjUwMTkxMV5BMl5BanBnXkFtZTcwNjk0NDk0NA@@._V1_SX300.jpg",
+                Description:
+                    "Elle Woods (Reese Witherspoon) has it all. She's the President of her sorority, a Hawaiian Tropic girl, "
+                    + "Miss June in her campus calendar, and, above all, a natural blonde. She dates the cutest fraternity boy on campus "
+                    + "and wants nothing more than to be Mrs. Warner Huntington III. But, there's just one thing stopping Warner (Matthew Davis) "
+                    + "from popping the question: Elle is too blonde. Growing up across the street from Aaron Spelling might mean something in "
+                    + "Los Angeles, California, but nothing to Warner's East-Coast blue blood family. So, when Warner packs up for Harvard Law "
+                    + "and reunites with an old sweetheart from prep school, Elle rallies all her resources and gets into Harvard, determined to "
+                    + "win him back. But law school is a far cry from the comforts of her poolside and the mall. Elle must wage the battle of her "
+                    + "life, for her guy, for herself and for all the blondes who suffer endless indignities everyday.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2001",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Legally Blonde 2: Red, White &amp; Blonde",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTkwNzExMjk0MF5BMl5BanBnXkFtZTcwOTUzNDcyMw@@._V1_SX300.jpg",
+                Description:
+                    "Sassy postgrad Elle Woods (Reese Witherspoon) is all about animal rights. In fact, she puts her nuptial plans on hold to head "
+                    + "to Washington, D.C. to get an anti-animal testing bill passed. Her building's doorman quickly shows her the ways and workings" + "of our nation's capital.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2003",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Rat Race",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNWEzM2NjMjctM2U3Yi00MGZhLWJlYTYtMWEyYjVjZDEzZjM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+                Description:
+                    "Donald P. Sinclair has placed six separate gold coins in different slot machines in his casino. The lucky six who find "
+                    + "these coins discover an opportunity of a lifetime: the chance to own $2 million, locked up in a locker in New Mexico. "
+                    + "These six contestants must now race each other to be the first to the cash. There are no rules in place and everything "
+                    + "that could possibly happen, does. Whilst, behind the scenes, Sinclair's associates are placing their bets.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2001",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Matilda",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNzRhYmZhOWEtZjA4NC00MTU1LWE1ODgtN2Q5Y2QxN2JlNDljXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+                Description:
+                    "Matilda Wormwood is an exquisite and intelligent little girl.Unfortunately, Matilda is misunderstood by her family "
+                    + "because she is very different from their ways of life.As time passes, Matilda finally starts school that has a "
+                    + "kindly teacher, loyal friends and a sadistic principal.As she gets fed up with the constant cruelty, Matilda begins "
+                    + "to realize that she has a gift of telekinetic powers.After some days of practice, Matilda suddenly turns the tables "
+                    + "to stand up to her parents and outwit the principal.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1996",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Stuart Little",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMDJlZWZiODItMGE3NC00Yzg3LWFhYTYtZTI2YWNlNjExMDE4XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+                Description:
+                    "In New York City, you would come across a small house, home to a family known as the Littles. You would happen to think of "
+                    + "them as the nicest family you'd ever meet. One day, Fredrick and Eleanor, both parents and Littles, ho to and orphanage "
+                    + "to find a brother for their son, George. While at it, they meet Stuart, a small, but charming mouse, who apparently, "
+                    + "is human-civilized. They adopt him, and everyone, even George, loves him. But there is one problem with Stuart's "
+                    + "life Snowbell, the Little family cat, who wants him. But when trouble starts up almost immediately, Stuart must make it "
+                    + "back to his home-before snowbell's friends find out about him.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1999",
+                Genre: "Family",
+                Actors: "7",
+            },
+            {
+                Title: "Pitch Perfect",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTcyMTMzNzE5N15BMl5BanBnXkFtZTcwNzg5NjM5Nw@@._V1_SX300.jpg",
+                Description:
+                    "The Barden Bellas are a collegiate, all-girls a cappella singing group thriving on female pop songs and their "
+                    + "perfect looks. After a disastrous failing at last year's finals, they are forced to regroup. Among the new recruits "
+                    + "is freshman Beca, an independent, aspiring DJ with no interest in the college life. But after she meets Jesse, from "
+                    + "the rival all-male a cappella group, Beca has a new outlook and takes it upon herself to help the Bellas find their new "
+                    + "look and sound and get back into the competition.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2012",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Pitch Perfect 2",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMzk4OTM2NzMzNl5BMl5BanBnXkFtZTgwNTAzNDE0NDE@._V1_SX300.jpg",
+                Description:
+                    "The Bellas are back, and they are better than ever. After being humiliated in front of none other than the President of "
+                    + "the United States of America, the Bellas are taken out of the Aca-Circuit. In order to clear their name and regain "
+                    + "their status, the Bellas take on a seemingly impossible task: winning an International competition no American team has "
+                    + "ever won. In order to accomplish this monumental task, they need to strengthen the bonds of friendship and sisterhood, "
+                    + "and blow away the competition with their amazing aca-magic! With all new friends and old rivals tagging along for "
+                    + "the trip, the Bellas can hopefully accomplish their dreams once again.",
+        
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2015",
+                Genre: "Comedy",
+                Actors: "7",
+            },
+            {
+                Title: "Cast Away",
+                Poster: "https://m.media-amazon.com/images/M/MV5BN2Y5ZTU4YjctMDRmMC00MTg4LWE1M2MtMjk4MzVmOTE4YjkzXkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_SX300.jpg",
+                Description:
+                    "Memphis-based FedEx operations executive Chuck Noland and grad student Kelly Frears have long dated and lived together, "
+                    + "and despite each being the love of the other's life, have not gotten married because of their respective busy schedules, "
+                    + "especially Chuck's as he is more often on business trips than he is at home. That marital status changes when on Christmas "
+                    + "Day 1995 as Chuck is rushing off to catch yet another FedEx plane for a business trip, he gives Kelly a ring. That flight "
+                    + "experiences technical difficulties, and goes down somewhere in the south Pacific. In a life raft, a relatively unharmed "
+                    + "Chuck washes up on shore what he will learn is a deserted island, he unaware what has happened to any of his fellow "
+                    + "flight mates, or the plane. However several of the packages on board for delivery do wash up on shore with him, "
+                    + "those packages which he initially treats with respect. Chuck realizes that his priority is survival - which primarily "
+                    + "means food, water, shelter and fire - and rescue. But survival is also in an emotional sense. To fulfill that emotional "
+                    + "need, he has an heirloom pocket watch with Kelly's photo that she gave him as a Christmas present, and eventually opening "
+                    + "the FedEx packages, a Wilson volleyball on which he paints a face and which he names Wilson. As time progresses, "
+                    + "Chuck goes through a range of emotions, but if rescue is ever in the cards, he realizes that he has to find a way to get "
+                    + "off the island, which is seemingly impossible in his circumstance due to the strong on shore surf he cannot get beyond "
+                    + "without assistance. What Chuck may not fully realize is the longer he is not rescued, the harder it will be for him to "
+                    + "return to his old life in its entirety if he ever is rescued. Although the thought of Kelly is what largely keeps "
+                    + "him motivated to be rescued, Kelly, who probably believes him to be dead, may have moved on emotionally "
+                    + "from him in the intervening time.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2000",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "House of Gucci",
+                Poster: "https://m.media-amazon.com/images/M/MV5BYzdlMTMyZWQtZWNmMC00MTJiLWIyMWMtM2ZlZDdlYzZhNTc0XkEyXkFqcGdeQXVyMTMzNDE5NDM2._V1_SX300.jpg",
+                Description:
+                    "House of Gucci is inspired by the family empire behind the Italian fashion house of Gucci. When Patrizia Reggiani "
+                    + "(Lady Gaga), an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel "
+                    + "the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately...murder.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "2021",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "Gladiator",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+                Description:
+                    "Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. Before his death, "
+                    + "the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his "
+                    + "family condemned to death. The powerful general is unable to save his family, and his loss of will allows him to get "
+                    + "captured and put into the Gladiator games until he dies. The only desire that fuels him now is the chance to rise to the "
+                    + "top so that he will be able to look into the eyes of the man who will feel his revenge.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2000",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "The Karate Kid",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNTkzY2YzNmYtY2ViMS00MThiLWFlYTEtOWQ1OTBiOGEwMTdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+                Description:
+                    "Daniel and his mother move from New Jersey to California. She has a wonderful new job, but Daniel quickly discovers that a "
+                    + "dark haired Italian boy with a Jersey accent doesn't fit into the blond surfer crowd. Daniel manages to talk his way out "
+                    + "of some fights, but he is finally cornered by several who belong to the same karate school. As Daniel is passing out from "
+                    + "the beating he sees Miyagi, the elderly gardener leaps into the fray and save him by outfighting half a dozen "
+                    + "teenagers. Miyagi and Daniel soon find out the real motivator behind the boys' violent attitude in the form of their "
+                    + "karate teacher. Miyagi promises to teach Daniel karate and arranges a fight at the all-valley tournament some months off. "
+                    + "When his training begins, Daniel doesn't understand what he is being shown. Miyagi seems more interested in having "
+                    + "Daniel paint fences and wax cars than teaching him Karate.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1984",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "Joker",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+                Description:
+                    "Arthur Fleck works as a clown and is an aspiring stand-up comic. He has mental health issues, part of which involves "
+                    + "uncontrollable laughter. Times are tough and, due to his issues and occupation, Arthur has an even worse time than most. "
+                    + "Over time these issues bear down on him, shaping his actions, making him ultimately take on the persona he is more known "
+                    + "as...Joker.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2019",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "The Karate Kid",
+                Poster: "https://m.media-amazon.com/images/M/MV5BYjQ1NzRhYjYtMWY3My00ODA0LTk5ZDctYjQ4YjE0M2RhMGNiXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
+                Description:
+                    "12-year-old Dre Parker has moved to China, and finds himself like a fish out of water. He befriends a fellow classmate, "
+                    + "Mei Ying, only to make a rival, Cheng, who starts to bully and attack Dre. Soon, Mr Han, the maintenance man of "
+                    + "Dre's apartment, fends off Cheng and his friends when they are attacking Dre and signs Dre up to fight in the "
+                    + "Kung Fu tournament in return for the bullies laying off of Dre. Dre realizes Mr. Han is much more than a maintenance "
+                    + "man, when he's revealed as a master of Kung Fu and Dre soon learns that Kung Fu is about self defense and peace, instead "
+                    + "of violence and bloodshed.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "2010",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "Bohemian Rhapsody",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_SX300.jpg",
+                Description:
+                    "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer "
+                    + "Freddie Mercury. Freddie defied stereotypes and shattered convention to become one of the most beloved entertainers "
+                    + "on the planet. The film traces the meteoric rise of the band through their iconic songs and revolutionary sound. "
+                    + "They reach unparalleled success, but in an unexpected turn Freddie, surrounded by darker influences, shuns Queen in pursuit of his solo career. Having suffered greatly without the collaboration of Queen, Freddie manages to reunite with his bandmates just "
+                    + "in time for Live Aid. While bravely facing a recent AIDS diagnosis, Freddie leads the band in one of the greatest "
+                    + "performances in the history of rock music. Queen cements a legacy that continues to inspire outsiders, dreamers and "
+                    + "music lovers to this day.",
+                CommingSoon: "1",
+                Reminder: "4",
+                ReleaseDate: "2018",
+                Genre: "Drama",
+                Actors: "7",
+            },
+            {
+                Title: "Forrest Gump",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+                Description:
+                    "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only "
+                    + "friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for "
+                    + "service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, "
+                    + "inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people "
+                    + "and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood "
+                    + "sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.",
+                CommingSoon: "0",
+                Reminder: "4",
+                ReleaseDate: "1994",
+                Genre: "Drama",
+                Actors: "7",
+            },
             {
                 Title: "Black Panther",
                 Poster: "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg",
@@ -670,7 +1276,7 @@ let myVue = new Vue({
                     + "hold the clue to untangling the web of S.P.E.C.T.R.E. As the daughter of the assassin, she understands Bond in a way most "
                     + "others cannot. As Bond ventures towards the heart of S.P.E.C.T.R.E., he learns a chilling connection between him and the "
                     + "enemy he seeks.",
-
+        
                 CommingSoon: "0",
                 Reminder: "4",
                 ReleaseDate: "2015",

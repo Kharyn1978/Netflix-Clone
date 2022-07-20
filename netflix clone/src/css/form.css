@@ -6,7 +6,7 @@
 
 .root{
     background-size: cover;
-    background-image:radial-gradient(rgba(0,0,0,0.4)),rgba(0,0,0,0.8) ,url(https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png);
+    background-image:radial-gradient(rgba(0,0,0,0.4)),rgba(0,0,0,0.8) ,url(../images/netflixLandingPage.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -25,6 +25,7 @@
 
 .img-logo {
     width :14%;
+    color :#e50914;
    
    
 }

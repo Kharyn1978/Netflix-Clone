@@ -9,7 +9,6 @@ let myVue = new Vue({
         myModel: "Look for movies here",
         newItem: "",
         newItem: "",
-<<<<<<< HEAD
         SearchInput: {
             serchText: "",
         }
@@ -422,13 +421,11 @@ let myVue = new Vue({
                 Actors: "7",
             },
         ],
-=======
         searchInput: {
             searchText: "",
         },
 
         searched: false,
->>>>>>> 2146b1bd32ba0442a5fa29040ebb9c3e4a8ef485
 
         movie: [
 

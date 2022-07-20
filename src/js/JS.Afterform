@@ -1,19 +1,70 @@
+!-------Login function--------!
+
+
 function Login(){
-
-   var a = new Array();
-   up1 = new Object();
-   up2 = new Object();
+    
+ var a = new Array();
+ up1 = new Object();
+ up2 = new Object();
  
-kharla={
- name:’kharyn@gmail.com’,
- password:’abc@12',
+up1={
+ name:’Kharla@gmail.com’,
+ password:kharlavista,
 };
-
-cherel={
+up2={
  name:’cherel@gmail.com’,
- password:'bcd@12',
+ password:cherelvie,
 };
 
-a.push(kharla);
-a.push(cherel);
+a.push(up1);
+a.push(up2);
+
+
+}
+
+
+
+!--------Extracting logged-in user information-----!
+
+var username = document.getElementById(‘uname’).value;
+var password = document.getElementById(‘psw’).value;
+sessionStorage.setItem(“currentloggedin”,username);
+
+localStorage.setItem('all_users',JSON.stringify(a));
+
+
+
+!------display user after login-----------!
+
+a=JSON.parse((localStorage.getItem("all_users")));
+a.push({name: username, password: password});
+localStorage.setItem('name',JSON.stringify(a));
+for(var i=0; i<a.length; i++)
+  {
+   var li = document.createElement("li");
+   li.innerHTML=a[i]['name'];
+   document.getElementById("listuser").appendChild(li);
+  }
+
+
+
+
+!------Login function-------!
+  function Login(){
+
+   const hash = Object.fromEntries(a.map(e => [e.name, e.password]))
+   var username = document.getElementById('uname').value;
+var password = document.getElementById('psw').value;
+
+   for (let key of hash) {
+    
+    if(key[0] === username && key[1]===atob(password))
+     {
+         alert('Login successful');
+     }
+ 
+    else
+     {
+         alert('Login fail');
+     }
 }

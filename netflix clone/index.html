@@ -45,7 +45,7 @@
             <div>{{event. title}}</div>
             <div>{{event.genre}}</div>
             <div>{{event.ReleaseDate}}</div>
-            <div class="botton"><button v-on: click="addToMovieList(event)">watched</button></div>
+            <div class="button"><button v-on: click="addToMovieList(event)">watched</button></div>
           </div>
         </a>
       </div>
@@ -55,7 +55,7 @@
 
 
 
-    <div v-show="!watched">
+    <div v-show="Not watched">
       <div v-for="(event,index) in filteredMovieTitles">
         <a class="movie-link">
           <div>
@@ -63,7 +63,7 @@
             <div>{{event. title}}</div>
             <div>{{event.genre}}</div>
             <div>{{event.ReleaseDate}}</div>
-            <div class="botton"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
+            <div class="button"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
           </div>
         </a>
       </div>

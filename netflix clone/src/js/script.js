@@ -12,6 +12,12 @@ let myVue = new Vue({
         SearchInput: {
             serchText: "",
         }
+        
+        Watched :false ,
+        NotWatched :false,
+        commingSoon :false ,
+        available :false ,
+
 
         Watched:[
             

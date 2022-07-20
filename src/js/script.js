@@ -32,6 +32,7 @@ let myVue = new Vue({
                 ReleaseDate: "2005",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: false,
             },
 
             {
@@ -51,6 +52,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 Video: "https://www.youtube.com/embed/gmRKv7n2If8?rel=0;&autoplay=1",
+                watched: false,
             },
             {
                 Title: "Interstellar",
@@ -64,6 +66,7 @@ let myVue = new Vue({
                 ReleaseDate: "2014",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Sunshine",
@@ -77,6 +80,7 @@ let myVue = new Vue({
                 ReleaseDate: "2007",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "James and the Giant Peach",
@@ -92,6 +96,7 @@ let myVue = new Vue({
                 ReleaseDate: "1996",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Chicken Run",
@@ -105,6 +110,7 @@ let myVue = new Vue({
                 ReleaseDate: "2000",
                 Genre: "Family",
                 Actors: "7",
+                watched: false, 
             },
             {
                 Title: "A.I. Artificial Intelligence",
@@ -122,6 +128,7 @@ let myVue = new Vue({
                 ReleaseDate: "2001",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Grave of the Fireflies",
@@ -135,6 +142,7 @@ let myVue = new Vue({
                 ReleaseDate: "1988",
                 Genre: "Drama",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "The Gods Must Be Crazy",
@@ -149,6 +157,7 @@ let myVue = new Vue({
                 ReleaseDate: "1980",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Ant-Man",
@@ -163,6 +172,7 @@ let myVue = new Vue({
                 ReleaseDate: "2015",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Uncharted",
@@ -179,6 +189,7 @@ let myVue = new Vue({
                 ReleaseDate: "2022",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Red Notice",
@@ -195,6 +206,7 @@ let myVue = new Vue({
                 ReleaseDate: "2021",
                 Genre: "Crime",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Wonder Woman",
@@ -209,6 +221,7 @@ let myVue = new Vue({
                 ReleaseDate: "2017",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Honey, I Shrunk the Kids",
@@ -224,6 +237,7 @@ let myVue = new Vue({
                 ReleaseDate: "1989",
                 Genre: "Family",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Babe",
@@ -238,6 +252,7 @@ let myVue = new Vue({
                 ReleaseDate: "1995",
                 Genre: "Family",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Edward Scissorhands",
@@ -252,6 +267,8 @@ let myVue = new Vue({
                 ReleaseDate: "1990",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: false,
+
             },
             {
                 Title: "The Adventures of Tintin",
@@ -273,6 +290,7 @@ let myVue = new Vue({
                 ReleaseDate: "2011",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Life of Pi",
@@ -290,6 +308,7 @@ let myVue = new Vue({
                 ReleaseDate: "2012",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Ice Age",
@@ -304,6 +323,7 @@ let myVue = new Vue({
                 ReleaseDate: "2002",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Road to El Dorado",
@@ -317,6 +337,7 @@ let myVue = new Vue({
                 ReleaseDate: "2000",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Home Alone",
@@ -334,6 +355,7 @@ let myVue = new Vue({
                 ReleaseDate: "1990",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Johnny English Strikes Again",
@@ -348,6 +370,7 @@ let myVue = new Vue({
                 ReleaseDate: "2018",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Johnny English Reborn",
@@ -366,6 +389,7 @@ let myVue = new Vue({
                 ReleaseDate: "2011",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Johnny English",
@@ -381,6 +405,7 @@ let myVue = new Vue({
                 ReleaseDate: "2003",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Legally Blonde",
@@ -399,6 +424,7 @@ let myVue = new Vue({
                 ReleaseDate: "2001",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Legally Blonde 2: Red, White &amp; Blonde",
@@ -411,6 +437,7 @@ let myVue = new Vue({
                 ReleaseDate: "2003",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Rat Race",
@@ -425,6 +452,7 @@ let myVue = new Vue({
                 ReleaseDate: "2001",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Matilda",
@@ -440,6 +468,7 @@ let myVue = new Vue({
                 ReleaseDate: "1996",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Stuart Little",
@@ -456,6 +485,7 @@ let myVue = new Vue({
                 ReleaseDate: "1999",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Pitch Perfect",
@@ -471,6 +501,7 @@ let myVue = new Vue({
                 ReleaseDate: "2012",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Pitch Perfect 2",
@@ -488,6 +519,7 @@ let myVue = new Vue({
                 ReleaseDate: "2015",
                 Genre: "Comedy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Cast Away",
@@ -515,6 +547,7 @@ let myVue = new Vue({
                 ReleaseDate: "2000",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "House of Gucci",
@@ -528,6 +561,7 @@ let myVue = new Vue({
                 ReleaseDate: "2021",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Gladiator",
@@ -543,6 +577,7 @@ let myVue = new Vue({
                 ReleaseDate: "2000",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Karate Kid",
@@ -561,6 +596,7 @@ let myVue = new Vue({
                 ReleaseDate: "1984",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Joker",
@@ -575,6 +611,7 @@ let myVue = new Vue({
                 ReleaseDate: "2019",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Karate Kid",
@@ -591,6 +628,7 @@ let myVue = new Vue({
                 ReleaseDate: "2010",
                 Genre: "Drama",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Bohemian Rhapsody",
@@ -608,6 +646,7 @@ let myVue = new Vue({
                 ReleaseDate: "2018",
                 Genre: "Drama",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Forrest Gump",
@@ -624,6 +663,7 @@ let myVue = new Vue({
                 ReleaseDate: "1994",
                 Genre: "Drama",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Black Panther",
@@ -639,6 +679,7 @@ let myVue = new Vue({
                 ReleaseDate: "2018",
                 Genre: "Adventure",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "TRON: Legacy",
@@ -654,6 +695,7 @@ let myVue = new Vue({
                 ReleaseDate: "2010",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "Jurassic Park",
@@ -668,6 +710,7 @@ let myVue = new Vue({
                 ReleaseDate: "1993",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "The Terminator",
@@ -684,6 +727,7 @@ let myVue = new Vue({
                 ReleaseDate: "1984",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: false,
             },
             {
                 Title: "E.T. the Extra-Terrestrial",
@@ -698,6 +742,7 @@ let myVue = new Vue({
                 ReleaseDate: "1982",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "WALL·E",
@@ -723,6 +768,7 @@ let myVue = new Vue({
                 ReleaseDate: "2008",
                 Genre: "Family",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Maze Runner",
@@ -740,6 +786,7 @@ let myVue = new Vue({
                 ReleaseDate: "2014",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Divergent",
@@ -757,6 +804,7 @@ let myVue = new Vue({
                 ReleaseDate: "2014",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Divergent Series: Insurgent",
@@ -771,6 +819,7 @@ let myVue = new Vue({
                 ReleaseDate: "2015",
                 Genre: "Sci-fi",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Death on the Nile",
@@ -786,6 +835,7 @@ let myVue = new Vue({
                 ReleaseDate: "2022",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Italian Job",
@@ -804,6 +854,7 @@ let myVue = new Vue({
                 ReleaseDate: "2003",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Catch Me If You Can",
@@ -817,6 +868,7 @@ let myVue = new Vue({
                 ReleaseDate: "2002",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Fast and the Furious: Tokyo Drift",
@@ -831,6 +883,7 @@ let myVue = new Vue({
                 ReleaseDate: "2006",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Skyfall",
@@ -847,6 +900,7 @@ let myVue = new Vue({
                 ReleaseDate: "2012",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Spectre",
@@ -866,6 +920,7 @@ let myVue = new Vue({
                 ReleaseDate: "2015",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Casino Royale",
@@ -882,6 +937,7 @@ let myVue = new Vue({
                 ReleaseDate: "2006",
                 Genre: "Crime",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Alice in Wonderland",
@@ -897,6 +953,7 @@ let myVue = new Vue({
                 ReleaseDate: "2010",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Peter Pan",
@@ -912,6 +969,7 @@ let myVue = new Vue({
                 ReleaseDate: "2003",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
@@ -958,6 +1016,7 @@ let myVue = new Vue({
                 ReleaseDate: "2019",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Prince of Persia: The Sands of Time",
@@ -970,6 +1029,7 @@ let myVue = new Vue({
                 ReleaseDate: "2010",
                 Genre: "Fantasy",
                 Actors: "7",
+                watched: true,
             },
             {
                 Title: "Spider-Man: Homecoming",

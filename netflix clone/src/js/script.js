@@ -822,25 +822,15 @@ let myVue = new Vue({
         },
 
         filteredMoviesAvailable() {
-<<<<<<< HEAD
            let movieArray= this.movie;
            let availableMovie
-=======
-            let filteredMoviesAvailable = this.movie.filter((movie) => {
-                return movie.Title.toLowerCase().includes(this.searchInput.searchText.toLowerCase());
-            })
-
+            
             return filteredMoviesAvailable;
         },
 
         
         filteredWatchedMovie() {
-            let filteredWatchedMovie = this.movie.filter((movie) => {
-                return movie.Watched.toLowerCase().includes(this.searchInput.searchText.ToLowerCase());
-            })
-
-            return filteredWatchedMovie;
-
+            
             ;
         },
 
@@ -853,7 +843,6 @@ let myVue = new Vue({
 
             ;
         },
->>>>>>> 2146b1bd32ba0442a5fa29040ebb9c3e4a8ef485
 
     },
 

@@ -42,7 +42,7 @@
       <li><a href="#Drama">Drama</a></li>
       <li><a href="#Crime">Crime</a></li>
     </div>
-    
+
    </nav>
 
     <div class="main">
@@ -105,7 +105,7 @@
     <div class="row">
       <h3>COMING SOON</h3>
       <div class="movies-list row_posters">
-        <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterExtraLarge">
+        <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterSmall">
           <a class="movie-link">
             <div class="product-image">
               <img :src="event.Poster" alt="Movie Poster">
@@ -124,7 +124,7 @@
     <div class="row">
       <h3>AVAILABLE</h3>
       <div class="movies-list row_posters">
-        <div v-for="(event,index) in filteredMoviesAvailable" class="movies row_poster row_posterLarge">
+        <div v-for="(event,index) in filteredMoviesAvailable" class="movies row_poster row_posterSmall">
           <a class="movie-link">
             <div class="product-image">
               <img :src="event.Poster" alt="Movie Poster">

@@ -1118,6 +1118,7 @@ let myVue = new Vue({
         },
 
         addToWatchedList(event) {
+            
             ;
         },
 

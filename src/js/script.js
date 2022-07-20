@@ -996,7 +996,6 @@ let myVue = new Vue({
                     + "another gigantic ape is found - this time a female. She is brought to the USA, and the heart is successfully implanted. But "
                     + "then King Kong, having sensed the female ape, breaks loose.",
                 CommingSoon: "0",
-                watched: true,
                 Reminder: "4",
                 ReleaseDate: "1986",
                 Genre: "Fantasy",
@@ -1011,7 +1010,6 @@ let myVue = new Vue({
                     + "as they expect. The players will have to brave parts unknown and unexplored, from the arid deserts to the snowy mountains, in "
                     + "order to escape the world's most dangerous game.",
                 CommingSoon: "0",
-                watched: false,
                 Reminder: "4",
                 ReleaseDate: "2019",
                 Genre: "Fantasy",
@@ -1086,31 +1084,32 @@ let myVue = new Vue({
             return filteredMoviesAvailable;
         },
 
-        /*
-                filteredWatchedMovie() {
-                    let filteredNotWatchedMovie = this.movies.filter((movie) => {
-                        return movie.watched.includes(true);
-                    })
+
+        filteredWatchedMovie() {
+            let filteredWatchedMovies = this.movies.filter((movie) => {
+                return movie.watched.includes(true);
+
+            })
         
-                    return filteredNotWatchedMovie;
-                },
-        */
-        /*
-                filteredNotWatchedMovie() {
-                    let filteredNotWatchedMovie = this.movies.filter((movie) => {
+            return filteredWatchedMovies;
+        },
+        
+        
+        filteredNotWatchedMovies() {
+                    let filteredNotWatchedMovies = this.movies.filter((movie) => {
                         return movie.watched.includes(false);
-                    })
+            })
         
-                    return filteredNotWatchedMovie;
+            return filteredNotWatchedMovies;
         
-                },
-        */
+        },
+        
     },
 
     methods: {
         function() {
             console.log('The value of myData is ' + this.myData);
-            document.getElementById("output").innerHTHML = myVue.$data.myModel;
+            document.getElementById("output").innerHTHML = myVue.$data.myModel.watched.NotWatched.commingSoon.available;
             console.log('The value of myData is ' + this.myData);
         },
 

@@ -1,0 +1,12 @@
+body{
+    background-color: #e50914;
+}
+.container{
+    width : 50% ;  
+    height : 50% ;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/afterform.css">
     <title>AfterFormPage</title>
 </head>
 <body>
@@ -11,25 +12,27 @@
     
     
   
-      <form onsubmit="return false">
+    <form onsubmit="return false">
 
-        <div>
-          <ul id="listuser">
-            <h3>Please Login:</h3>
-          </ul>
-        </div>
-  
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
-  
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
-  
-          <button type="submit" onclick="Login()">Login</button>
-        </div>
-      </form>
-  
-    
-</body>
+          <div>
+            <ul id="listuser">
+               <h3> Please Sign in: </h3>
+            </ul> 
+          </div>
+        
+      
+         <div class="container">
+         <label for="uname"><b>Username</b></label>
+         <input type="text" placeholder="Enter Username" id= "uname" name="uname" required>
+         <label for="psw"><b>Password</b></label>
+         <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+         <button type="submit" onclick="Login()">Login</button>
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <script src="src/js/script.js"></script>
+  </body>
 </html>

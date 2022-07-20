@@ -1,0 +1,19 @@
+function Login(){
+
+   var a = new Array();
+   up1 = new Object();
+   up2 = new Object();
+ 
+kharla={
+ name:’kharyn@gmail.com’,
+ password:’abc@12',
+};
+
+cherel={
+ name:’cherel@gmail.com’,
+ password:'bcd@12',
+};
+
+a.push(kharla);
+a.push(cherel);
+}

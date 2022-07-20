@@ -1,5 +1,6 @@
 body{
-    background-color: #e50914;
+    
+    background-image: url(../images/netflixLandingPage);
 }
 .container{
     width : 50% ;  

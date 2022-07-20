@@ -14,19 +14,19 @@
   <div id="myVueItem">
 
 
-    <div>
+    <header>
       <div>
         <h1><strong>Kharla Netfilx Clone</strong></h1>
       </div>
 
       <div>
-        <form>
-          <input id="searchText" v-model="searchInput.searchText" type="text" placeholder="What are you looking for?"
+        <form class="search-box">
+          <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
             required>
           <input id="searchButton" type="button" value="Search" v-on:click="theSearch" />
         </form>
       </div>
-    </div>
+    </header>
 
     <div class="main">
       <div v-for="movie in movies">
@@ -36,7 +36,7 @@
 
 
     <!------Watched-------->
-
+    <!--
     <div v-show="watched">
       <div v-for="(event,index) in filteredWatchedMovie()">
         <a class="movie-link">
@@ -50,12 +50,12 @@
         </a>
       </div>
     </div>
-
+  -->
     <!------NOT Watched-------->
 
 
-
-    <div v-show="Not watched">
+    <!--
+    <div v-show="!watched">
       <div v-for="(event,index) in filteredMovieTitles">
         <a class="movie-link">
           <div>
@@ -81,7 +81,7 @@
 
     </div>
 
-
+  -->
 
     <!------ Coming soon------>
 

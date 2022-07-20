@@ -6,11 +6,8 @@ let myVue = new Vue({
     // Members  -Variables
 
     data: {
-        myModel: "Look for movies here",
-        newItem: "",
-        newItem: "",
         SearchInput: {
-            serchText: "",
+            searchText: "",
         },
 
         watched: false,
@@ -1021,12 +1018,13 @@ let myVue = new Vue({
             return filteredMoviesComingSoon;
         },
 
-        /*filteredMoviesAvailable() {
-           let movieArray= this.movie;
-           let availableMovie
-            
+        filteredMoviesAvailable() {
+            let filteredMoviesAvailable = this.movies.filter((movie) => {
+                return movie.Title.toLowerCase().includes(this.SearchInput.searchText.toLowerCase());
+            })
+
             return filteredMoviesAvailable;
-        },*/
+        },
 
         /*
                 filteredWatchedMovie() {
@@ -1036,8 +1034,8 @@ let myVue = new Vue({
         
                     return filteredNotWatchedMovie;
                 },
-        
-        
+        */
+        /*
                 filteredNotWatchedMovie() {
                     let filteredNotWatchedMovie = this.movies.filter((movie) => {
                         return movie.watched.includes(false);

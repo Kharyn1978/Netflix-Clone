@@ -1,6 +1,10 @@
 header {
-    background-image : url(../images/actionmovie.webp);
+    background-image : url("../images/actionmovie.webp");
     height: 400px;
+}
+
+body {
+    background-color: rgb(22, 22, 22);
 }
 
 .movie-link {
@@ -28,7 +32,6 @@ header {
 }
 
 .watchedResults{
-    background-color:azure;
     display : block;
     height : 300px ;
 

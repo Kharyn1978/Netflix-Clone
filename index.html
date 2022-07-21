@@ -51,6 +51,25 @@
       </div>
     </div>
 
+     <!------ Available------>
+
+     <div class="row">
+      <h3>AVAILABLE</h3>
+      <div class="movies-list row_posters">
+        <div v-for="(event,index) in filteredMoviesAvailable" class="movies row_poster row_posterSmall">
+          <a class="movie-link">
+            <div class="product-image">
+              <img :src="event.Poster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
 
     <!------Watched-------->
     <!--
@@ -119,24 +138,7 @@
       </div>
     </div>
 
-    <!------ Available------>
-
-    <div class="row">
-      <h3>AVAILABLE</h3>
-      <div class="movies-list row_posters">
-        <div v-for="(event,index) in filteredMoviesAvailable" class="movies row_poster row_posterSmall">
-          <a class="movie-link">
-            <div class="product-image">
-              <img :src="event.Poster" alt="Movie Poster">
-              <div class="type">{{event.title}}</div>
-              <div class="type2">{{event.Genre}}</div>
-              <div class="type3">{{event.ReleaseDate}}</div>
-              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+   
 
   </div>
 

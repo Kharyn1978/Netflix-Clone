@@ -1179,6 +1179,18 @@ let myVue = new Vue({
             this.searched = !this.searched;
         },
 
+        addToAvailableMovieList(event) {
+            let MovieArray = this.movies;
+            for (let i=0 ;i< movieArray.length; i++) {
+                if( movieArray[i].Available== "true") {
+                    return movieArray[i];
+                } else{
+                    console.log(movieArray[i]);
+                }
+            }
+            
+        },
+
         addToWatchedList(event) {
             let MovieArray = this.movies;
             for (let i=0 ;i< movieArray.length; i++) {
@@ -1216,17 +1228,7 @@ let myVue = new Vue({
             
         },
 
-        addToAvailableMovieList(event) {
-            let MovieArray = this.movies;
-            for (let i=0 ;i< movieArray.length; i++) {
-                if( movieArray[i].Available== "true") {
-                    return movieArray[i];
-                } else{
-                    console.log(movieArray[i]);
-                }
-            }
-            
-        };
+        
 
     }
 });

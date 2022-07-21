@@ -1179,6 +1179,22 @@ let myVue = new Vue({
             this.searched = !this.searched;
         },
 
+        doSomething(){
+            let input= document.getElementById("input").value;
+            if (input==""){
+                alert("Please fill in");
+            } else {
+                let index=parseInt(input);
+                let theLength=parseInt(vm.$data.items.length);
+                if(index<theLength>){
+                    document.getElementById("output").innerHTML=vm.$data.items[index];
+                }else {
+                    alert("Array index out of bounds");
+                }
+            }
+
+        },
+
         addToAvailableMovieList(event) {
             let MovieArray = this.movies;
             for (let i=0 ;i< movieArray.length; i++) {

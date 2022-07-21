@@ -29,7 +29,7 @@
     </div>
 
   <div>
-    <input type="text" id="addMovies" v-model="AddMovieInput">
+    <input type="text" id="addMovies" placeholder="movie title" v-model="AddMovieInput">
     <button @click="saveMovie">Save the movie</button>
     <h3>v-for movie in movies</h3>
     <ul>
@@ -37,7 +37,15 @@
     </ul>
   </div>
 
-   <nav>
+  <h1><span> To watch movies:{{ toWatchMovies }}</span></h1>
+    <div>
+      <h2>input name of movie in list that you want to watch</h2>
+      <input type="text" id="theMovie">
+      <button v-on:click="doSomething"><vm.$data.movie[searchvalue]</button>
+      <h2 id="output"></h2>
+    </div>
+
+   
 
     <div class="container-fluid">
       <p class="h1">Movie Genre</p>

@@ -33,6 +33,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
 
             {
@@ -53,6 +54,7 @@ let myVue = new Vue({
                 Actors: "7",
                 Video: "https://www.youtube.com/embed/gmRKv7n2If8?rel=0;&autoplay=1",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Interstellar",
@@ -67,6 +69,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Sunshine",
@@ -81,6 +84,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "James and the Giant Peach",
@@ -97,6 +101,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Chicken Run",
@@ -111,6 +116,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: false, 
+                Available: true,
             },
             {
                 Title: "A.I. Artificial Intelligence",
@@ -129,6 +135,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Grave of the Fireflies",
@@ -143,6 +150,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "The Gods Must Be Crazy",
@@ -158,6 +166,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Ant-Man",
@@ -173,6 +182,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Uncharted",
@@ -190,6 +200,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Red Notice",
@@ -207,6 +218,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Wonder Woman",
@@ -222,6 +234,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Honey, I Shrunk the Kids",
@@ -238,6 +251,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Babe",
@@ -253,6 +267,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Edward Scissorhands",
@@ -268,7 +283,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: false,
-
+                Available: true,
             },
             {
                 Title: "The Adventures of Tintin",
@@ -291,6 +306,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Life of Pi",
@@ -309,6 +325,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Ice Age",
@@ -324,6 +341,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Road to El Dorado",
@@ -338,6 +356,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Home Alone",
@@ -356,6 +375,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Johnny English Strikes Again",
@@ -371,6 +391,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Johnny English Reborn",
@@ -390,6 +411,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Johnny English",
@@ -406,6 +428,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Legally Blonde",
@@ -425,6 +448,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Legally Blonde 2: Red, White &amp; Blonde",
@@ -438,6 +462,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Rat Race",
@@ -453,6 +478,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Matilda",
@@ -469,6 +495,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Stuart Little",
@@ -486,6 +513,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Pitch Perfect",
@@ -502,6 +530,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Pitch Perfect 2",
@@ -520,6 +549,7 @@ let myVue = new Vue({
                 Genre: "Comedy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Cast Away",
@@ -548,6 +578,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "House of Gucci",
@@ -562,6 +593,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Gladiator",
@@ -578,6 +610,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Karate Kid",
@@ -597,6 +630,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Joker",
@@ -612,6 +646,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Karate Kid",
@@ -629,6 +664,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Bohemian Rhapsody",
@@ -647,6 +683,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Forrest Gump",
@@ -664,6 +701,7 @@ let myVue = new Vue({
                 Genre: "Drama",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Black Panther",
@@ -680,6 +718,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "TRON: Legacy",
@@ -696,6 +735,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "Jurassic Park",
@@ -711,6 +751,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "The Terminator",
@@ -728,6 +769,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: false,
+                Available: true,
             },
             {
                 Title: "E.T. the Extra-Terrestrial",
@@ -743,6 +785,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "WALL·E",
@@ -769,6 +812,7 @@ let myVue = new Vue({
                 Genre: "Family",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Maze Runner",
@@ -787,6 +831,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Divergent",
@@ -805,6 +850,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Divergent Series: Insurgent",
@@ -820,6 +866,7 @@ let myVue = new Vue({
                 Genre: "Sci-fi",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Death on the Nile",
@@ -836,6 +883,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Italian Job",
@@ -855,6 +903,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Catch Me If You Can",
@@ -869,6 +918,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Fast and the Furious: Tokyo Drift",
@@ -884,6 +934,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Skyfall",
@@ -901,6 +952,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Spectre",
@@ -921,6 +973,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Casino Royale",
@@ -938,6 +991,7 @@ let myVue = new Vue({
                 Genre: "Crime",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Alice in Wonderland",
@@ -954,6 +1008,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Peter Pan",
@@ -970,6 +1025,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
@@ -986,6 +1042,7 @@ let myVue = new Vue({
                 ReleaseDate: "2005",
                 Genre: "Fantasy",
                 Actors: "7",
+                Available: true,
             },
             {
                 Title: "King Kong Lives",
@@ -1001,6 +1058,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Jumanji: The Next Level",
@@ -1015,6 +1073,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Prince of Persia: The Sands of Time",
@@ -1028,6 +1087,7 @@ let myVue = new Vue({
                 Genre: "Fantasy",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Spider-Man: Homecoming",
@@ -1044,6 +1104,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
             {
                 Title: "Indiana Jones and the Kingdom of the Crystal Skull",
@@ -1062,6 +1123,7 @@ let myVue = new Vue({
                 Genre: "Adventure",
                 Actors: "7",
                 watched: true,
+                Available: true,
             },
         ],
 
@@ -1118,21 +1180,53 @@ let myVue = new Vue({
         },
 
         addToWatchedList(event) {
-            
-            ;
+            let MovieArray = this.movies;
+            for (let i=0 ;i< movieArray.length; i++) {
+                if( movieArray[i].Watched== true) {
+                    return movieArray[i];
+                } else{
+                    console.log(movieArray[i]);
+                }
+            }
         },
+           
+       
 
         addToNotWatchedList(event) {
-            ;
+            let MovieArray = this.movies;
+            for (let i=0 ;i< movieArray.length; i++) {
+                if( movieArray[i].Available== true && movieArray[i]) {
+                    return movieArray[i];
+                } else{
+                    console.log(movieArray[i]);
+                }
+            }
+            
         },
 
         addToComingSoon(event) {
-            ;
+            let MovieArray = this.movies;
+            for (let i=0 ;i< movieArray.length; i++) {
+                if( movieArray[i].Available== true && movieArray[i]) {
+                    return movieArray[i];
+                } else{
+                    console.log(movieArray[i]);
+                }
+            }
+            
         },
 
         addToAvailableMovieList(event) {
-            ;
-        }
+            let MovieArray = this.movies;
+            for (let i=0 ;i< movieArray.length; i++) {
+                if( movieArray[i].Available== "true") {
+                    return movieArray[i];
+                } else{
+                    console.log(movieArray[i]);
+                }
+            }
+            
+        };
 
     }
 });

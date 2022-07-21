@@ -1,18 +1,18 @@
-/* @font-face{ 
+ @font-face{ 
     font-family:netflix-sans-regularf;
     src:url("../netflix-shadow/@font-face/") ;
 
  }
 
- */
 
- body {
+
+ /*body {
     padding : 0px;
     margin:  0px;
     overflow: hidden; 
     background-color: rgb(20, 20, 20);
-    background-image: url("../images/netflixLandingPage.jpg");
-}
+    background-image: url("../images/Netflixback.webp");
+}*/
 
 .root{
     background-size: cover;
@@ -62,9 +62,10 @@
     align-items: center;
 
 }
-.main-titles-containers{
+.main-titles-container{
     width:50%;
     text-align: center;
+    color: white;
  
 }
 
@@ -115,16 +116,6 @@
     font-size :1.4 em ;
     text-transform:uppercase ;
     text-align : center ;
-
-}
-
-.row {
-    height : 80px;
-    width  : 100px;
-    border-radius:10% ;
-    display : flex ;
-    flex-direction : row; 
-    justify-content:space-between ;
-   
+    font-family : Arial, Helvetica, sans-serif;
 
 }

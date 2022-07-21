@@ -31,24 +31,12 @@
       </form>
     </div>
 
-<<<<<<< HEAD
-  <div>
-    <input type="text" id="addMovies" placeholder="movie title" v-model="AddMovieInput">
-    <button @click="saveMovie">Save the movie</button>
-    <h3>v-for movie in movies</h3>
-    <ul>
-      <li v-for= "movie in movies">{{movie}}</li>
-    </ul>
-  </div>
-
-=======
     <!-- Display the Search results-->
     <!-- Not searched yet-->
     <div v-show="!searched">
       <!-- The search button is not clicked yet so we show nothing here-->
       <!-- this "!searched" means not searched---->
     </div>
->>>>>>> 6cfcf81006d71969f889ddb4c0e3ebb799ee00f4
 
     <div v-show="searched">
       <div v-for="(event,index) in searchTitles">

@@ -18,15 +18,24 @@
       <div>
         <h1><strong>Kharla Netfilx Clone</strong></h1>
       </div>
-
-      <div>
-        <form class="search-box">
-          <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
-            required>
-          <input id="searchButton" type="button" value="Search" v-on:click="theSearch" />
-        </form>
-      </div>
     </header>
+
+    <div>
+      <form class="search-box">
+        <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
+          required>
+        <input id="searchButton" type="button" value="Search" v-on:click="theSearch">
+      </form>
+    </div>
+
+  <div>
+    <input type="text" id="addMovies" v-model="AddMovieInput">
+    <button @click="saveMovie">Save the movie</button>
+    <h3>v-for movie in movies</h3>
+    <ul>
+      <li v-for= "movie in movies">{{movie}}</li>
+    </ul>
+  </div>
 
    <nav>
 

@@ -14,20 +14,24 @@
   <div id="myVueItem">
 
 
+    <!-- Header with Banner and Title -->
     <header>
       <div>
         <h1><strong>Kharla Netfilx Clone</strong></h1>
       </div>
     </header>
 
+    <!-- Search Input and Search Button -->
     <div>
       <form class="search-box">
+        <h1>Search Movies bellow</h1>
         <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
           required>
         <input id="searchButton" type="button" value="Search" v-on:click="theSearch">
       </form>
     </div>
 
+<<<<<<< HEAD
   <div>
     <input type="text" id="addMovies" placeholder="movie title" v-model="AddMovieInput">
     <button @click="saveMovie">Save the movie</button>
@@ -37,9 +41,30 @@
     </ul>
   </div>
 
+=======
+    <!-- Display the Search results-->
+    <!-- Not searched yet-->
+    <div v-show="!searched">
+      <!-- The search button is not clicked yet so we show nothing here-->
+      <!-- this "!searched" means not searched---->
+    </div>
+>>>>>>> 6cfcf81006d71969f889ddb4c0e3ebb799ee00f4
 
-   
+    <div v-show="searched">
+      <div v-for="(event,index) in searchTitles">
+        <a class="movie-link">
+          <div>
+            <img :src="event.Poster" alt="Movie Poster">
+            <div>{{event. title}}</div>
+            <div>{{event.genre}}</div>
+            <div>{{event.ReleaseDate}}</div>
+            <div class="button"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
+          </div>
+        </a>
+      </div>
+    </div>
 
+    <!-- Menu that takes you to the section where the different movies are displayed according to their genre-->
     <div class="container-fluid">
       <p class="h1">Movie Genre</p>
       <ul class="nav-menu"></ul>
@@ -53,23 +78,34 @@
       <li><a href="#Crime">Crime</a></li>
     </div>
 
-   </nav>
+    <!------ Available------>
 
-    <div class="main">
-      <div v-for="movie in movies">
-        <h1>{{movie.title}}</h1>
+    <div class="row">
+      <h3>MOVIES AVAILABLE</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in movies" class="">
+          <a class="movie-link">
+            <div class="product-image">
+              <img :src="event.Poster" class="moviePoster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
-     <!------ Available------>
+    <!------ Coming soon------>
 
-     <div class="row">
-      <h3>AVAILABLE</h3>
-      <div class="movies-list row_posters">
-        <div v-for="(event,index) in filteredMoviesAvailable" class="movies row_poster row_posterSmall">
+    <div class="row">
+      <h3>COMING SOON</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterSmall">
           <a class="movie-link">
             <div class="product-image">
-              <img :src="event.Poster" alt="Movie Poster">
+              <img :src="event.Poster" class="moviePoster" alt="Movie Poster">
               <div class="type">{{event.title}}</div>
               <div class="type2">{{event.Genre}}</div>
               <div class="type3">{{event.ReleaseDate}}</div>
@@ -97,58 +133,25 @@
       </div>
     </div>
   -->
+
     <!------NOT Watched-------->
-
-
-    <!--
-    <div v-show="!watched">
-      <div v-for="(event,index) in filteredMovieTitles">
-        <a class="movie-link">
-          <div>
-            <img :src="event.Poster" alt="Movie Poster">
-            <div>{{event. title}}</div>
-            <div>{{event.genre}}</div>
-            <div>{{event.ReleaseDate}}</div>
-            <div class="button"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-
-    <div>
-      <h1>Search Movies bellow</h1>
-      <button v-on:click="weWatched()">search</button>
-
-      <div class="watchedResults" v-show="search">
-        <h2 class="watched">WATCHED</h2>
-        <button v-on:click="weWatched()">close</button>
-      </div>
-
-    </div>
-
-  -->
-
-    <!------ Coming soon------>
-
     <div class="row">
-      <h3>COMING SOON</h3>
-      <div class="movies-list row_posters">
-        <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterSmall">
+      <h3>NOT WATCHED</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredNotWatchedMovies">
           <a class="movie-link">
-            <div class="product-image">
-              <img :src="event.Poster" alt="Movie Poster">
-              <div class="type">{{event.title}}</div>
-              <div class="type2">{{event.Genre}}</div>
-              <div class="type3">{{event.ReleaseDate}}</div>
-              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+            <div>
+              <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
+              <div>{{event. title}}</div>
+              <div>{{event.genre}}</div>
+              <div>{{event.ReleaseDate}}</div>
+              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
             </div>
           </a>
         </div>
       </div>
     </div>
 
-   
 
   </div>
 

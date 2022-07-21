@@ -10,7 +10,7 @@ let myVue = new Vue({
             searchText: "",
         },
 
-        watched: false,
+        searched: false,
         NotWatched: false,
         commingSoon: false,
         available: false,
@@ -115,7 +115,7 @@ let myVue = new Vue({
                 ReleaseDate: "2000",
                 Genre: "Family",
                 Actors: "7",
-                watched: false, 
+                watched: false,
                 Available: true,
             },
             {
@@ -1138,7 +1138,7 @@ let myVue = new Vue({
             return filteredMoviesComingSoon;
         },
 
-        filteredMoviesAvailable() {
+        searchTitles() {
             let filteredMoviesAvailable = this.movies.filter((movie) => {
                 return movie.Title.toLowerCase().includes(this.SearchInput.searchText.toLowerCase());
             })
@@ -1152,20 +1152,24 @@ let myVue = new Vue({
                 return movie.watched.includes(true);
 
             })
-        
+
             return filteredWatchedMovies;
         },
-        
-        
+
+
         filteredNotWatchedMovies() {
-                    let filteredNotWatchedMovies = this.movies.filter((movie) => {
-                        return movie.watched.includes(false);
+            let watchedMovies = [];
+            let filteredNotWatchedMovies = this.movies.filter((movie) => {
+                if (movie.watched = false) {
+                    watchedMovies.push(movie);
+                }
+                return watchedMovies;
             })
-        
+
             return filteredNotWatchedMovies;
-        
+
         },
-        
+
     },
 
     methods: {
@@ -1179,72 +1183,73 @@ let myVue = new Vue({
             this.searched = !this.searched;
         },
 
-        doSomething(){
-            let input= document.getElementById("input").value;
-            if (input==""){
+        doSomething() {
+            let input = document.getElementById("input").value;
+            if (input == "") {
                 alert("Please fill in");
             } else {
-                let index=parseInt(input);
-                let theLength=parseInt(vm.$data.items.length);
-                if(index<theLength>){
-                    document.getElementById("output").innerHTML=vm.$data.items[index];
-                }else {
+                let index = parseInt(input);
+                let theLength = parseInt(vm.$data.items.length);
+                if (index < theLength) {
+                    document.getElementById("output").innerHTML = vm.$data.items[index];
+                } else {
                     alert("Array index out of bounds");
                 }
             }
 
         },
 
+
         addToAvailableMovieList(event) {
             let MovieArray = this.movies;
-            for (let i=0 ;i< movieArray.length; i++) {
-                if( movieArray[i].Available== "true") {
+            for (let i = 0; i < movieArray.length; i++) {
+                if (movieArray[i].Available == "true") {
                     return movieArray[i];
-                } else{
+                } else {
                     console.log(movieArray[i]);
                 }
             }
-            
+
         },
 
         addToWatchedList(event) {
             let MovieArray = this.movies;
-            for (let i=0 ;i< movieArray.length; i++) {
-                if( movieArray[i].Watched== true) {
+            for (let i = 0; i < movieArray.length; i++) {
+                if (movieArray[i].Watched == true) {
                     return movieArray[i];
-                } else{
+                } else {
                     console.log(movieArray[i]);
                 }
             }
         },
-           
-       
+
+
 
         addToNotWatchedList(event) {
             let MovieArray = this.movies;
-            for (let i=0 ;i< movieArray.length; i++) {
-                if( movieArray[i].Available== true && movieArray[i]) {
+            for (let i = 0; i < movieArray.length; i++) {
+                if (movieArray[i].Available == true && movieArray[i]) {
                     return movieArray[i];
-                } else{
+                } else {
                     console.log(movieArray[i]);
                 }
             }
-            
+
         },
 
         addToComingSoon(event) {
             let MovieArray = this.movies;
-            for (let i=0 ;i< movieArray.length; i++) {
-                if( movieArray[i].Available== true && movieArray[i]) {
+            for (let i = 0; i < movieArray.length; i++) {
+                if (movieArray[i].Available == true && movieArray[i]) {
                     return movieArray[i];
-                } else{
+                } else {
                     console.log(movieArray[i]);
                 }
             }
-            
+
         },
 
-        
+
 
     }
 });

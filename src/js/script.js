@@ -14,8 +14,8 @@ let myVue = new Vue({
         NotWatched: false,
         commingSoon: false,
         available: false,
-
-        searched: false,
+        watched: false,
+       
 
         movies: [
             {
@@ -1157,7 +1157,7 @@ let myVue = new Vue({
                    })
 
                    return filteredWatchedMovies;
-                   
+
         },
 
 

@@ -19,7 +19,7 @@ body {
 .horizontalDisplayClass {
     display: flex;
     overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-x:hidden;
     padding: 20px;
 }
 
@@ -28,8 +28,8 @@ body {
 }
 
 .moviePoster{
-  height : 100px ;
-  width : 100px ;
+  height : 200px ;
+  width : 200x ;
   border-radius: 10%;
   flex-direction : row; 
   justify-content:space-between ;

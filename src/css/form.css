@@ -6,13 +6,13 @@
 
 
 
- /*body {
+ body {
     padding : 0px;
     margin:  0px;
     overflow: hidden; 
     background-color: rgb(20, 20, 20);
     background-image: url("../images/Netflixback.webp");
-}*/
+}*
 
 .root{
     background-size: cover;

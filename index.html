@@ -105,22 +105,24 @@
     </div>
 
 
-    <!------Watched-------->
-    <!--
-    <div v-show="watched">
-      <div v-for="(event,index) in filteredWatchedMovie()">
-        <a class="movie-link">
-          <div>
-            <img :src="event.Poster" alt="Movie Poster">
-            <div>{{event. title}}</div>
-            <div>{{event.genre}}</div>
-            <div>{{event.ReleaseDate}}</div>
-            <div class="button"><button v-on: click="addToMovieList(event)">watched</button></div>
-          </div>
-        </a>
+   <!------Watched-------->
+    
+   <div class="row">
+     <h3>WATCHED</h3>
+     <div class="horizontalDisplayClass">
+       <div v-for="(event,index) in filteredWatchedMovies">
+         <a class="movie-link">
+           <div>
+              <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
+              <div>{{event. title}}</div>
+              <div>{{event.genre}}</div>
+              <div>{{event.ReleaseDate}}</div>
+              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
+           </div>
+         </a>
+       </div>
       </div>
     </div>
-  -->
 
     <!------NOT Watched-------->
     <div class="row">

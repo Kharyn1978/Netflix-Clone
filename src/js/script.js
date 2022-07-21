@@ -32,7 +32,7 @@ let myVue = new Vue({
                 ReleaseDate: "2005",
                 Genre: "Fantasy",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
 
@@ -134,7 +134,7 @@ let myVue = new Vue({
                 ReleaseDate: "2001",
                 Genre: "Sci-fi",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -149,7 +149,7 @@ let myVue = new Vue({
                 ReleaseDate: "1988",
                 Genre: "Drama",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -199,7 +199,7 @@ let myVue = new Vue({
                 ReleaseDate: "2022",
                 Genre: "Adventure",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -217,7 +217,7 @@ let myVue = new Vue({
                 ReleaseDate: "2021",
                 Genre: "Crime",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -233,7 +233,7 @@ let myVue = new Vue({
                 ReleaseDate: "2017",
                 Genre: "Adventure",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -266,7 +266,7 @@ let myVue = new Vue({
                 ReleaseDate: "1995",
                 Genre: "Family",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -282,7 +282,7 @@ let myVue = new Vue({
                 ReleaseDate: "1990",
                 Genre: "Fantasy",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -305,7 +305,7 @@ let myVue = new Vue({
                 ReleaseDate: "2011",
                 Genre: "Adventure",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -700,7 +700,7 @@ let myVue = new Vue({
                 ReleaseDate: "1994",
                 Genre: "Drama",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -750,7 +750,7 @@ let myVue = new Vue({
                 ReleaseDate: "1993",
                 Genre: "Sci-fi",
                 Actors: "7",
-                watched: false,
+                watched: true,
                 Available: true,
             },
             {
@@ -1148,12 +1148,16 @@ let myVue = new Vue({
 
 
         filteredWatchedMovie() {
+            let watchedMovies = [];
             let filteredWatchedMovies = this.movies.filter((movie) => {
-                return movie.watched.includes(true);
+                  if (movie.watched = true) {
+                     watchedMovies.push(movie);
+                   }
+                    return watchedMovies;
+                   })
 
-            })
-
-            return filteredWatchedMovies;
+                   return filteredWatchedMovies;
+                   
         },
 
 

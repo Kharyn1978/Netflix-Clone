@@ -1232,7 +1232,7 @@ let myVue = new Vue({
         addToNotWatchedList(event) {
             let MovieArray = this.movies;
             for (let i = 0; i < movieArray.length; i++) {
-                if (movieArray[i].Available == true && movieArray[i]) {
+                if (movieArray[i].Watched == false ){
                     return movieArray[i];
                 } else {
                     console.log(movieArray[i]);

@@ -21,7 +21,7 @@ body {
     overflow-y: hidden;
     overflow-x:scroll;
     padding: 10px;
-
+    margin : ;
 }
 
 .horizontalDisplayClass:hover {
@@ -33,12 +33,13 @@ body {
 }
 
 .moviePoster{
+  object-fit:contain ;
   margin-right : 10px;
   width :100x ;
   max-height :100px; 
   flex-direction : row; 
   justify-content:space-between ;
-  object-fit:contain ;
+  
   transition : transform 450ms ;
 }
 

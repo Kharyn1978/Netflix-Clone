@@ -71,7 +71,7 @@
     <div class="row">
       <h3>MOVIES AVAILABLE</h3>
       <div class="horizontalDisplayClass">
-        <div v-for="(event,index) in movies" class="">
+        <div v-for="(event,index) in movies" class="movies row_poster row_posterExtraLarge">
           <a class="movie-link">
             <div class="product-image">
               <img :src="event.Poster" class="moviePoster" alt="Movie Poster">
@@ -113,7 +113,7 @@
        <div v-for="(event,index) in filteredWatchedMovies">
          <a class="movie-link">
            <div>
-              <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
+              <img :src="event.Poster" alt="Movie Poster" class="movies row_poster row_posterExtraLarge">
               <div>{{event. title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>

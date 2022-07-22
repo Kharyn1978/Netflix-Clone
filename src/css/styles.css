@@ -33,12 +33,13 @@ body {
 }
 
 .moviePoster{
-  height : 200px ;
-  width : 200x ;
-  border-radius: 10%;
+  margin-right : 10px;
+  width :100x ;
+  max-height :100px; 
   flex-direction : row; 
   justify-content:space-between ;
- 
+  object-fit:contain ;
+  transition : transform 450ms ;
 }
 
 

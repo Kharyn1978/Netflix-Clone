@@ -53,4 +53,4 @@ let singleUser = {
     movies: []
 }
 
-//localStorage.setItem("user1",JSON.parse(singleUser));
+g localStorage.setItem("user1",JSON.parse(singleUser));

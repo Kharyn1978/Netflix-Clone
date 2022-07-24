@@ -13,7 +13,7 @@ const users = [
         id: "user3",
         email: "em@d.com",
         password: "pass3"
-    }
+    },
 ];
 sessionStorage.clear();
 

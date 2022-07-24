@@ -1,11 +1,14 @@
 header {
-    background-image: url(https://m.media-amazon.com/images/M/MV5BMTgxOTYxMTg3OF5BMl5BanBnXkFtZTgwMDgyMzA2NDE@._V1_SX300.jpg);---
-    height: 30%;
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMTgxOTYxMTg3OF5BMl5BanBnXkFtZTgwMDgyMzA2NDE@._V1_SX300.jpg);
+    height: auto;
     width: 100%;
 }
+
 .img-logo {
     width :14%;
     color :#e50914;
+
+}
 
 .banner{
     background-position: center center;

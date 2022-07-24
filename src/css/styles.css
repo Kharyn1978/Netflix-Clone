@@ -3,6 +3,9 @@ header {
     height: 100%;
     width: 100%;
 }
+.img-logo {
+    width :14%;
+    color :#e50914;
 
 .banner{
     background-position: center center;
@@ -52,7 +55,7 @@ body {
     overflow-y: hidden;
     overflow-x:scroll;
     padding: 10px;
-    margin : ;
+   
 }
 
 .horizontalDisplayClass:hover {

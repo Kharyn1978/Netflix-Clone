@@ -22,9 +22,9 @@ if (localStorage.getItem("allUsers") === null)
 
 function login() {
     let storedUsers = JSON.parse(localStorage.getItem("allUsers"));
-    let formData = getElementById("signInForm"); //for the form
-    let thisEmail = formData.getElementById("userEmail").value;
-    let thisPassword = formData.getElementById("userPassword").value;
+    //let formData = document.getElementById("signInForm"); //for the form
+    let thisEmail = document.getElementById("userEmail").value;
+    let thisPassword = document.getElementById("userPassword").value;
 
     console.log(thisEmail)
     for (let i = 0; i < storedUsers.length; i++) {
@@ -33,7 +33,8 @@ function login() {
             storedUsers[i].password !== thisPassword
         ) {
             //show error -- enter corrwectemail passowoerrd
-            console.log("please enter correct details");
+            alert("please enter correct details");
+            return;
         }
 
         if (
@@ -43,14 +44,80 @@ function login() {
             //we login with user
 
             let thisUser = localStorage.getItem(storedUsers[i].id);
-            console.log(JSON.parse(thisUser));
+            alert(JSON.parse(thisUser));
         }
     }
 }
 
-let singleUser = {
+let user1 = {
     id: "user1",
-    movies: []
+    movies: [
+        {
+            Title: "Prince of Persia: The Sands of Time",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "Spider-Man: Homecoming",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "Indiana Jones and the Kingdom of the Crystal Skull",
+            watched: true,
+            Available: true,
+        },
+    ]
 }
 
-g localStorage.setItem("user1",JSON.parse(singleUser));
+
+
+localStorage.setItem("user1",JSON.parse(user1));
+
+let User2 = {
+    id: "user2",
+    movies: [
+        {
+            Title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "King Kong Lives",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "Jumanji: The Next Level",
+            watched: true,
+            Available: true,
+        },
+
+    ]
+}
+
+localStorage.setItem("user2",JSON.parse(user2));
+
+let user3 = {
+    id: "user3",
+    movies: [
+        {
+            Title: "The Fast and the Furious: Tokyo Drift",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "Skyfall",
+            watched: true,
+            Available: true,
+        },
+        {
+            Title: "Spectre",
+            watched: true,
+            Available: true,
+        },
+
+    ]
+}
+
+localStorage.setItem("user3",JSON.parse(user3));

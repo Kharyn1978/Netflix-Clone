@@ -15,7 +15,7 @@ let myVue = new Vue({
         commingSoon: false,
         available: false,
         watched: false,
-       
+
 
         movies: [
             {
@@ -217,7 +217,7 @@ let myVue = new Vue({
                 ReleaseDate: "2021",
                 Genre: "Crime",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -324,7 +324,7 @@ let myVue = new Vue({
                 ReleaseDate: "2012",
                 Genre: "Adventure",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -700,7 +700,7 @@ let myVue = new Vue({
                 ReleaseDate: "1994",
                 Genre: "Drama",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -750,7 +750,7 @@ let myVue = new Vue({
                 ReleaseDate: "1993",
                 Genre: "Sci-fi",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -849,7 +849,7 @@ let myVue = new Vue({
                 ReleaseDate: "2014",
                 Genre: "Sci-fi",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -933,7 +933,7 @@ let myVue = new Vue({
                 ReleaseDate: "2006",
                 Genre: "Crime",
                 Actors: "7",
-                watched: true,
+                watched: false,
                 Available: true,
             },
             {
@@ -1148,32 +1148,18 @@ let myVue = new Vue({
 
 
         filteredWatchedMovie() {
-            let watchedMovies = [];
             let filteredWatchedMovies = this.movies.filter((movie) => {
-                  if (movie.watched = true) {
-                     watchedMovies.push(movie);
-                   }
-                    return watchedMovies;
-                   })
-
-                   return filteredWatchedMovies;
-
+                return movie.watched == true;
+            })
+            return filteredWatchedMovies;
         },
-
 
         filteredNotWatchedMovies() {
-            let watchedMovies = [];
-            let filteredNotWatchedMovies = this.movies.filter((movie) => {
-                if (movie.watched = false) {
-                    watchedMovies.push(movie);
-                }
-                return watchedMovies;
+            let filteredWatchedMovies = this.movies.filter((movie) => {
+                return movie.watched == false;
             })
-
-            return filteredNotWatchedMovies;
-
+            return filteredWatchedMovies;
         },
-
     },
 
     methods: {
@@ -1232,7 +1218,7 @@ let myVue = new Vue({
         addToNotWatchedList(event) {
             let MovieArray = this.movies;
             for (let i = 0; i < movieArray.length; i++) {
-                if (movieArray[i].Watched == false ){
+                if (movieArray[i].Watched == false) {
                     return movieArray[i];
                 } else {
                     console.log(movieArray[i]);

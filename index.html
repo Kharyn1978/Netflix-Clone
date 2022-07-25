@@ -16,20 +16,27 @@
 
     <!-- Header with Banner and Title -->
     <header>
-      
-        <img class="img-logo" src="src/images/580b57fcd9996e24bc43c529.png" alt="NetflixLogo.png">
-      </div>
+
+      <img class="img-logo" src="src/images/580b57fcd9996e24bc43c529.png" alt="NetflixLogo.png">
+
       <div class="banner">
         <div class="banner_contents">
-          <h1 class ="banner-title">"The Divergent Series: Insurgent"</h1>
+          <h1 class="banner-title">"The Divergent Series: Insurgent"</h1>
           <div class="banner_buttons">
             <button class="banner_button">Play</button>
           </div>
           <div class="banner_description">
-            As she searches for allies and answers in the wake of the uprising, Tris and Four are on the run. Being hunted by Jeanine
-            Matthews, the leader of the Erudite faction, Tris and Four will race against time as they try to figure out what Abnegation
-            sacrificed their lives to protect, and why the Erudite leaders will do anything to stop them. Haunted by her past choices but 
-            desperate to protect the ones she loves, Tris faces one impossible challenge after another as she unlocks the truth about the
+            As she searches for allies and answers in the wake of the uprising, Tris and Four are on the run. Being
+            hunted
+            by Jeanine
+            Matthews, the leader of the Erudite faction, Tris and Four will race against time as they try to figure out
+            what
+            Abnegation
+            sacrificed their lives to protect, and why the Erudite leaders will do anything to stop them. Haunted by her
+            past choices but
+            desperate to protect the ones she loves, Tris faces one impossible challenge after another as she unlocks
+            the
+            truth about the
             past and ultimately the future of her world."
           </div>
         </div>
@@ -122,22 +129,22 @@
     </div>
 
 
-   <!------Watched-------->
-    
-   <div class="row">
-     <h3>WATCHED</h3>
-     <div class="horizontalDisplayClass">
-       <div v-for="(event,index) in filteredWatchedMovies">
-         <a class="movie-link">
-           <div>
+    <!------Watched-------->
+
+    <div class="row">
+      <h3>WATCHED</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredWatchedMovie">
+          <a class="movie-link">
+            <div>
               <img :src="event.Poster" alt="Movie Poster" class="movies row_poster row_posterExtraLarge">
-              <div>{{event. title}}</div>
+              <div>{{event.title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>
               <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
-           </div>
-         </a>
-       </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -145,11 +152,11 @@
     <div class="row">
       <h3>NOT WATCHED</h3>
       <div class="horizontalDisplayClass">
-        <div v-for="(event,index) in filteredNotWatchedMovies">`
+        <div v-for="(event,index) in filteredNotWatchedMovies">
           <a class="movie-link">
             <div>
               <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
-              <div>{{event. title}}</div>
+              <div>{{event.title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>
               <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>

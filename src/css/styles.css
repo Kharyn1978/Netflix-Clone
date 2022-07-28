@@ -2,6 +2,7 @@ header {
     background-image: url(https://cdn.mos.cms.futurecdn.net/SFYfN9LEgM3kJGoK9zYVuA.png);
     height: auto;
     width: 100%;
+    background-position : center center;
 }
 
 .img-logo {
@@ -14,7 +15,7 @@ header {
     background-position: center center;
     color: white;
     object-fit: contain;
-    height: 418px;
+    height: 400px;
 }
 
 .banner_contents{
@@ -91,7 +92,7 @@ button{
 }
 .wrapper{
     margin : 0 auto;
-    width : 1000px;
+    width : 100%;
 
 }
  
@@ -101,9 +102,9 @@ iframe{
 
 .videowrapper{
      position : relative;
-     padding-bottom : 56.25% ;
+     padding-bottom :56.25% ;
      padding-top: 25px; 
-     height :0px;
+     height :100px;
 
 }
 

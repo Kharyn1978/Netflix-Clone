@@ -56,13 +56,14 @@ body {
 .horizontalDisplayClass {
     display: flex;
     overflow-y: hidden;
-    overflow-x:scroll;
+    overflow-x:scroll; 
     padding: 10px;
    
 }
 
 .horizontalDisplayClass:hover {
     transform: scale(1.08);
+    
 }
 
 .horizontalDisplayClass ::-webkit-scrollbar {
@@ -76,7 +77,6 @@ body {
   max-height :100px; 
   flex-direction : row; 
   justify-content:space-between ;
-  
   transition : transform 450ms ;
 }
 

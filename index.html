@@ -76,24 +76,22 @@
       </div>
     </div>
 
-    <!-- Menu that takes you to the section where the different movies are displayed according to their genre-->
+    <!-- Menu that takes you to the section where the different movies are displayed according to their category-->
     <div class="container-fluid">
-      <p class="h1">Movie Genre</p>
+      <p class="h1">Movies Category</p>
       <ul class="nav-menu"></ul>
-      <li><a href="#Action">Action</a></li>
-      <li><a href="#Adventure">Adventure</a></li>
-      <li><a href="#Comedy">Comedy</a></li>
-      <li><a href="#Family">Family</a></li>
-      <li><a href="#Sci-fi">Sci-fi</a></li>
-      <li><a href="#Fantasy">Fantasy</a></li>
-      <li><a href="#Drama">Drama</a></li>
-      <li><a href="#Crime">Crime</a></li>
+      <li><a href="#MOVIES AVAILABLE">MOVIES AVAILABLE</a></li>
+      <li><a href="#COMING SOON">COMING SOON</a></li>
+      <li><a href="#WATCHED">WATCHED</a></li>
+      <li><a href="#NOT WATCHED">NOT WATCHED</a></li>
+
     </div>
 
     <!------ Available------>
 
     <div class="row">
-      <h3>MOVIES AVAILABLE</h3>
+      <h3 id ="MOVIES AVAILABLE" class="display-2">MOVIES AVAILABLE</h3>
+      
       <div class="horizontalDisplayClass">
         <div v-for="(event,index) in movies" class="movies row_poster row_posterExtraLarge">
           <a class="movie-link">
@@ -112,7 +110,7 @@
     <!------ Coming soon------>
 
     <div class="row">
-      <h3>COMING SOON</h3>
+      <h3 id="COMING SOON" class="display-2">COMING SOON</h3>
       <div class="horizontalDisplayClass">
         <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterLarge">
           <a class="movie-link">
@@ -132,7 +130,7 @@
     <!------Watched-------->
 
     <div class="row">
-      <h3>WATCHED</h3>
+      <h3 id="WATCHED" class="display-2">WATCHED</h3>
       <div class="horizontalDisplayClass">
         <div v-for="(event,index) in filteredWatchedMovie">
           <a class="movie-link">
@@ -150,7 +148,7 @@
 
     <!------NOT Watched-------->
     <div class="row">
-      <h3>NOT WATCHED</h3>
+      <h3 id="NOT WATCHED" class="display-2">NOT WATCHED</h3>
       <div class="horizontalDisplayClass">
         <div v-for="(event,index) in filteredNotWatchedMovies">
           <a class="movie-link">

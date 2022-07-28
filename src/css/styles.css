@@ -89,4 +89,31 @@ button{
    background-color: #e33e3e ;
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.wrapper{
+    margin : 0 auto;
+    width : 1000px;
 
+}
+ 
+iframe{
+    width : 100%;
+}
+
+.videowrapper{
+     position : relative;
+     padding-bottom : 56.25% ;
+     padding-top: 25px; 
+     height :0px;
+
+}
+
+
+.videowrapper iframe{
+    position : absolute;
+     left :0px;
+     top : 0px;
+     right : 0px;
+     bottom : 0px; 
+     height : 100%;
+     width : 100%;
+}

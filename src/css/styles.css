@@ -52,7 +52,9 @@ body {
     padding :20px;
 }
 
-
+.horizontalDisplayClass::-webkit-scrollbar {
+    display: none;
+}
 
 .horizontalDisplayClass {
     display: flex;
@@ -60,15 +62,6 @@ body {
     overflow-x:hidden; 
     padding: 10px;
    
-}
-
-.horizontalDisplayClass:hover {
-    transform: scale(1.08);
-    
-}
-
-.horizontalDisplayClass ::-webkit-scrollbar {
-    display:none !important;
 }
 
 .moviePoster{

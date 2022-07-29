@@ -1,15 +1,10 @@
- @font-face{ 
-    font-family:netflix-sans-regularf;
-    src:url("../netflix-shadow/@font-face/") ;
 
- }
-  
 body {
     padding : 0px;
     margin:  0px;
 
     background-color: rgba(0, 0, 0, 1);
-    background-image: url("../images/Netflixback.webp");
+    background-image: url("../images/netflixprice.jpg");
     box-shadow: inset 220px 100px 250px #000000, inset -220px -100px 250px #000000;
 }
 
@@ -106,13 +101,13 @@ body {
 }
 
 .main-email-container{
-    width : 50% ;
+    width : 55% ;
     height :content;
     background-color: #ffffff;
     display : flex ;
-    flex-direction :column ; 
-   justify-content:space-between ;
-   align-items : center;
+    flex-direction :r; 
+    justify-content:space-between ;
+    align-items : center;
 }
 
 .main-email-container-input{

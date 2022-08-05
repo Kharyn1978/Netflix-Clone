@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <title> Netfilx Clone </title>
+</head>
+
+<body>
+
+  <div id="myVueItem">
+
+
+    <!-- Header with Banner and Title -->
+    <header>
+
+      <img class="img-logo" src="src/images/580b57fcd9996e24bc43c529.png" alt="NetflixLogo.png">
+
+      <div class="banner">
+        <div class="banner_contents">
+          <h1 class="banner-title">"Legally Blonde"</h1>
+          <div class="banner_buttons">
+            <button class="banner_button">Play</button>
+            
+          </div>
+          <div class="banner_description">
+            "Elle Woods (Reese Witherspoon) has it all. She's the President of her sorority, a Hawaiian Tropic girl, 
+                    Miss June in her campus calendar, and, above all, a natural blonde. She dates the cutest fraternity boy on campus 
+                    and wants nothing more than to be Mrs. Warner Huntington III. But, there's just one thing stopping Warner (Matthew Davis) 
+                    from popping the question: Elle is too blonde. Growing up across the street from Aaron Spelling might mean something in 
+                    Los Angeles, California, but nothing to Warner's East-Coast blue blood family. So, when Warner packs up for Harvard Law 
+                    and reunites with an old sweetheart from prep school, Elle rallies all her resources and gets into Harvard, determined to 
+                    win him back. But law school is a far cry from the comforts of her poolside and the mall. Elle must wage the battle of her 
+                    life, for her guy, for herself and for all the blondes who suffer endless indignities everyday."
+          </div>
+        </div>
+        <div class="banner--fadeBottom"></div>
+
+      </div>
+    </header>
+
+    <!-- Search Input and Search Button -->
+    <div>
+      <form class="search-box">
+        <h1>Search Movies bellow</h1>
+        <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
+          required>
+        <input id="searchButton" type="button" value="Search" v-on:click="theSearch">
+      </form>
+    </div>
+
+    <!-- Display the Search results-->
+    <!-- Not searched yet-->
+    <div v-show="!searched">
+      <!-- The search button is not clicked yet so we show nothing here-->
+      <!-- this "!searched" means not searched---->
+    </div>
+
+    <div v-show="searched">
+      <div v-for="(event,index) in searchTitles">
+        <a class="movie-link">
+          <div>
+            <img :src="event.Poster" alt="Movie Poster">
+            <div>{{event. title}}</div>
+            <div>{{event.genre}}</div>
+            <div>{{event.ReleaseDate}}</div>
+            <div class="button"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Menu that takes you to the section where the different movies are displayed according to their category-->
+    <div class="container-fluid">
+      <p class="h1">Movies Category</p>
+      <ul class="nav-menu"></ul>
+      <li><a href="#MOVIES AVAILABLE">MOVIES AVAILABLE</a></li>
+      <li><a href="#COMING SOON">COMING SOON</a></li>
+      <li><a href="#WATCHED">WATCHED</a></li>
+      <li><a href="#NOT WATCHED">NOT WATCHED</a></li>
+
+    </div>
+
+            <h3>THE ICE AGE TRAILER</h3>
+
+       <div class="videowrapper">
+         <iframe src="https://www.youtube-nocookie.com/embed/0U0L4uT0btQ?start=5" title="YouTube video player" 
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+    <!------ Available------>
+
+    <div class="row">
+      <h3 id ="MOVIES AVAILABLE" class="display-2">MOVIES AVAILABLE</h3>
+      
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in movies" class="movies row_poster row_posterExtraLarge">
+          <a class="movie-link">
+            <div class="product-image">
+              <img :src="event.Poster" class="moviePoster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!------ Coming soon------>
+
+    <div class="row">
+      <h3 id="COMING SOON" class="display-2">COMING SOON</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredMoviesComingSoon" class="movies row_poster row_posterLarge">
+          <a class="movie-link">
+            <div class="product-image">
+              <img :src="event.Poster" class="moviePoster" alt="Movie Poster">
+              <div class="type">{{event.title}}</div>
+              <div class="type2">{{event.Genre}}</div>
+              <div class="type3">{{event.ReleaseDate}}</div>
+              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!------Watched-------->
+
+    <div class="row">
+      <h3 id="WATCHED" class="display-2">WATCHED</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredWatchedMovie">
+          <a class="movie-link">
+            <div>
+              <img :src="event.Poster" alt="Movie Poster" class="movies row_poster row_posterLarge">
+              <div>{{event.title}}</div>
+              <div>{{event.genre}}</div>
+              <div>{{event.ReleaseDate}}</div>
+              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!------NOT Watched-------->
+    <div class="row">
+      <h3 id="NOT WATCHED" class="display-2">NOT WATCHED</h3>
+      <div class="horizontalDisplayClass">
+        <div v-for="(event,index) in filteredNotWatchedMovies">
+          <a class="movie-link">
+            <div>
+              <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
+              <div>{{event.title}}</div>
+              <div>{{event.genre}}</div>
+              <div>{{event.ReleaseDate}}</div>
+              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>

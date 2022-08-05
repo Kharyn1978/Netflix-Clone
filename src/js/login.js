@@ -66,14 +66,14 @@ function login(e) {
             }
         })
         sessionStorage.setItem(matchedUser.id, JSON.stringify(thisUserInfo));
-        window.location.replace("index.html");
+        window.location.replace("homePage.html");
         //sessionStorage.setItem("user1",user1 movies)
     }
 }
 
 function logout() {
     sessionStorage.clear();
-    window.location.replace("form.html");
+    window.location.replace("index.html");
 }
 
 let allUsersMovieData = [

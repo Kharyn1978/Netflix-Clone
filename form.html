@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/form.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/ab83b275830b2d585ea027c47e3b237a?family=Graphique+W01+Regular"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <img rel="shortcut icon" href="src/images/NetflixIcon.png" />
+    <script src="src/js/login.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/form.css">
-  <link href="//db.onlinewebfonts.com/c/ab83b275830b2d585ea027c47e3b237a?family=Graphique+W01+Regular" rel="stylesheet"
-    type="text/css" />
-  <img rel="shortcut icon" href="src/images/NetflixIcon.png">
-  <script src="src/js/login.js"></script>
-</head>
+  <body>
 
-<body>
-  <div>
+    
+    <div>
+      <div class="background-image-container"></div>
 
-    <div class="background-image-container"></div>
+      <div class="root">
+        <nav class="navbar">
+          <img
+            class="img-logo"
+            src="src/images/580b57fcd9996e24bc43c529.png"
+            alt="NetflixLogo.png"
+          />
+        </nav>
+      </div>
 
-    <div class="root">
-      <nav class="navbar">
-        <img class="img-logo" src="src/images/580b57fcd9996e24bc43c529.png" alt="NetflixLogo.png">
-       
-      </nav>
     </div>
-
-
     <div class="main-container">
       <div class="main-title-container">
         <h1 class="main-title">Unlimited movies ,TV shows and more.</h1>
         <h2 class="main-subtitle">Watch anywhere .Cancel anytime.</h2>
         <p class="main-call-to-action">
-          Ready to watch ? Enter your email and password ,and enjoy your experience.
-        </p>
+            Ready to watch ? Enter your email and password ,and enjoy your
+            experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="main-email-container">
+        <form id="signInForm">
+          <input
+            id="userEmail"
+            class="main-email-container-input"
+            type="email"
+            placeholder="Email address"
+          />
+          <input
+            id="userPassword"
+            class="main-password-container-input"
+            type="password"
+            placeholder="password"
+          />
+          <a onclick="login()" href="javascript:void(0)" class="btn-get-started"
+            >Get Started</a
+          >
+        </form>
       </div>
     </div>
-
-    <div class="main-email-container">
-      <form id="signInForm">
-        <input id="userEmail" class="main-email-container-input" type="email" placeholder="Email address"/>
-        <input id="userPassword" class="main-password-container-input" type="password" placeholder="password"/>
-        <a onclick="login()" href="javascript:void(0)" class="btn-get-started">Get Started</a>
-        
-      </form>
-
-    </div>
-
-
-  </div>
-</body>
-
+  </body>
 </html>

@@ -139,4 +139,4 @@ let allUsersMovieData = [
 
         ]
     }
-];
+]

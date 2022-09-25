@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    background-color: rgb(29, 27, 27);
+}
+
+#netflixLogo {
+    position: fixed;
+    width: 150px;
+    margin: 20px;
+    opacity: 60%;
+}
+
+#watchlist {
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+#heading {
+    text-align: center;
+    color: #fff;
+    animation: heading 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes heading {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+
+#clearWL {
+    background-color: #e50914;
+    border-radius: 4px;
+    border: none;
+    padding: 7px 15px;
+    margin: 1% 0% 3%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#clearWL:hover {
+    background-color: rgb(188, 31, 31);
+}
+
+#clearBtn {
+    text-align: right;
+    margin-right: 5%;
+}
+
+.remove {
+    display: flex;
+    justify-content: center;
+}
+
+.removeBtn {
+    background-color: #e50914;
+    border-radius: 4px;
+    border: none;
+    padding: 7px 15px;
+    margin-bottom: 6%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.removeBtn:hover {
+    background-color: rgb(188, 31, 31);
+}
+
+.card {
+    color: #fff;
+    width: 21.35rem;
+    height: 28rem;
+    margin: 6%;
+    background-color: #433b3b;
+    border-radius: 10px;
+}
+
+.movieDetails {
+    margin-left: 5%;
+}
+
+.movieDescription {
+    margin-left: 5%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 3.5rem;
+}

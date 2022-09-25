@@ -5,50 +5,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/styles.css">
+
+  <!-- Page Title -->
   <title> Netfilx Clone </title>
+
+  <!-- Main Css -->
+  <link rel="stylesheet" href="src/css/styles.css">
+
+  <!-- Main JS -->
+  <script src="./src/js/script.js" defer></script>
+
 </head>
 
 <body>
 
   <div id="myVueItem">
 
-
-    <!-- Header with Banner and Title -->
     <header>
+      <a href="./homePage.html">
+        <img src="src/images/580b57fcd9996e24bc43c529.png" alt="netflixLogo" id="netflixLogo"></a>
 
-      <img class="img-logo" src="src/images/580b57fcd9996e24bc43c529.png" alt="NetflixLogo.png">
-
-      <div class="banner">
-        <div class="banner_contents">
-          <h1 class="banner-title">"Legally Blonde"</h1>
-          <div class="banner_buttons">
-            <button class="banner_button">Play</button>
-            
-          </div>
-          <div class="banner_description">
-            "Elle Woods (Reese Witherspoon) has it all. She's the President of her sorority, a Hawaiian Tropic girl, 
-                    Miss June in her campus calendar, and, above all, a natural blonde. She dates the cutest fraternity boy on campus 
-                    and wants nothing more than to be Mrs. Warner Huntington III. But, there's just one thing stopping Warner (Matthew Davis) 
-                    from popping the question: Elle is too blonde. Growing up across the street from Aaron Spelling might mean something in 
-                    Los Angeles, California, but nothing to Warner's East-Coast blue blood family. So, when Warner packs up for Harvard Law 
-                    and reunites with an old sweetheart from prep school, Elle rallies all her resources and gets into Harvard, determined to 
-                    win him back. But law school is a far cry from the comforts of her poolside and the mall. Elle must wage the battle of her 
-                    life, for her guy, for herself and for all the blondes who suffer endless indignities everyday."
-          </div>
-        </div>
-        <div class="banner--fadeBottom"></div>
-
-      </div>
+      <button id="signOut"><a href="index.html" id="signOutText">Sign Out</a>
+      </button>
     </header>
 
+    <!-- Youtube trailer Video -->
+    <div class="trailer">
+      <iframe src="https://www.youtube-nocookie.com/embed/0U0L4uT0btQ?start=5" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen id="trailerVideo"></iframe>
+    </div>
+
     <!-- Search Input and Search Button -->
-    <div>
+
+    <div class="searchSection">
+
       <form class="search-box">
-        <h1>Search Movies bellow</h1>
-        <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
-          required>
-        <input id="searchButton" type="button" value="Search" v-on:click="theSearch">
+
+        <div>
+          <input id="searchText" v-model="SearchInput.searchText" type="text" placeholder="What are you looking for?"
+            required class="searchBar">
+        </div>
+
+        <div>
+          <input id="searchButton" type="button" value="Search" v-on:click="theSearch" class="searchBtn">
+        </div>
+
       </form>
     </div>
 
@@ -59,43 +61,37 @@
       <!-- this "!searched" means not searched---->
     </div>
 
-    <div v-show="searched">
+    <div v-show="searched" class="searchedDisplay">
       <div v-for="(event,index) in searchTitles">
         <a class="movie-link">
-          <div>
+          <div class="searchDisplayMovies">
             <img :src="event.Poster" alt="Movie Poster">
             <div>{{event. title}}</div>
             <div>{{event.genre}}</div>
             <div>{{event.ReleaseDate}}</div>
-            <div class="button"><button v-on: click="addToMovieList(event)">NOT watched</button></div>
+            <div class="button"><button v-on: click="addToWatchList(event)">NOT watched</button></div>
           </div>
         </a>
       </div>
     </div>
 
     <!-- Menu that takes you to the section where the different movies are displayed according to their category-->
+    <h1 class="title">Movies Category</h1>
+
     <div class="container-fluid">
-      <p class="h1">Movies Category</p>
-      <ul class="nav-menu"></ul>
-      <li><a href="#MOVIES AVAILABLE">MOVIES AVAILABLE</a></li>
-      <li><a href="#COMING SOON">COMING SOON</a></li>
-      <li><a href="#WATCHED">WATCHED</a></li>
-      <li><a href="#NOT WATCHED">NOT WATCHED</a></li>
+
+      <ul><a href="#MOVIES AVAILABLE" class="nav-menu">MOVIES AVAILABLE</a></ul>
+      <ul><a href="#COMING SOON" class="nav-menu">COMING SOON</a></ul>
+      <ul><a href="#WATCHED" class="nav-menu">WATCHED</a></ul>
+      <ul><a href="#NOT WATCHED" class="nav-menu">NOT WATCHED</a></ul>
 
     </div>
 
-            <h3>THE ICE AGE TRAILER</h3>
-
-       <div class="videowrapper">
-         <iframe src="https://www.youtube-nocookie.com/embed/0U0L4uT0btQ?start=5" title="YouTube video player" 
-         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      
     <!------ Available------>
 
     <div class="row">
-      <h3 id ="MOVIES AVAILABLE" class="display-2">MOVIES AVAILABLE</h3>
-      
+      <h3 id="MOVIES AVAILABLE" class="display-2">MOVIES AVAILABLE</h3>
+
       <div class="horizontalDisplayClass">
         <div v-for="(event,index) in movies" class="movies row_poster row_posterExtraLarge">
           <a class="movie-link">
@@ -104,7 +100,7 @@
               <div class="type">{{event.title}}</div>
               <div class="type2">{{event.Genre}}</div>
               <div class="type3">{{event.ReleaseDate}}</div>
-              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+              <div class="type4"><button v-on: click="addToWatchList(event)">Add</button></div>
             </div>
           </a>
         </div>
@@ -123,7 +119,7 @@
               <div class="type">{{event.title}}</div>
               <div class="type2">{{event.Genre}}</div>
               <div class="type3">{{event.ReleaseDate}}</div>
-              <div class="type4"><button v-on: click="addToWatchlist(event)">Add</button></div>
+              <div class="type4"><button v-on: click="addToWatchList(event)">Add</button></div>
             </div>
           </a>
         </div>
@@ -139,11 +135,11 @@
         <div v-for="(event,index) in filteredWatchedMovie">
           <a class="movie-link">
             <div>
-              <img :src="event.Poster" alt="Movie Poster" class="movies row_poster row_posterLarge">
+              <img :src="event.Poster" alt="Movie Poster" class="moviePoster">
               <div>{{event.title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>
-              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
+              <div class="button"><button v-on: click="addToWatchList(event)">Add</button></div>
             </div>
           </a>
         </div>
@@ -161,10 +157,31 @@
               <div>{{event.title}}</div>
               <div>{{event.genre}}</div>
               <div>{{event.ReleaseDate}}</div>
-              <div class="button"><button v-on: click="addToMovieList(event)">Add</button></div>
+              <div class="button"><button v-on: click="addToWatchList(event)">Add</button></div>
             </div>
           </a>
         </div>
+      </div>
+    </div>
+
+<!------------------------------------------------------
+                        WatchList
+------------------------------------------------------->
+
+
+    <!-- This is where your movies will appear if you can manage to make the add to watch list function -->
+    <div class="row">
+      <h2>WatchList</h2>
+      <div class="movies-list row__posters">
+        <div v-for="watch in watchList" class="movie row__poster row__posterLarge">
+          <a class="movie-link">
+            <div class="product-image">
+              <img :src="watch.Poster" alt="Movie Poster" v-on:click="changeBanner(watch)">
+              <div class="type">{{watch.Genre}}</div>
+              <div class="type3">{{watch.ReleaseDate}}</div>
+            </div>
+        </div>
+        </a>
       </div>
     </div>
 
@@ -174,7 +191,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
   <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 
-  <script src="src/js/script.js"></script>
 </body>
 
 </html>
